@@ -1,0 +1,80 @@
+# destroy_db  0x0040 0x0050
+#      Handle   UUID (16 or 128bit)                 Attribute Type                                        Permissions            Initial Parameter Value
+#                                                                                                         RD   WR   IND  NOT
+# TASK_GATT
+1      0001     2801                                Secondary_Service                                     Y    N    N    N       {Service=0xA00D("Service D")}
+2      0002     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0003,UUID=0xB00C}
+3      0003     B00C                                Value_V12                                             Y    N    N    N       0x0C
+4      0004     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0005,UUID=0x0000B00B000000000123456789ABCDEF}
+5      0005     0000B00B000000000123456789ABCDEF    Value_V11(128-bit_UUID)                               Y    N    N    N       0x0B
+# TASK_GATT
+16     0010     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00B("Service B.3")}
+17     0011     2803                                Characteristic                                        Y    N    N    N       {properties=0x3E,handle=0x0012,UUID=0xB006}
+18     0012     B006                                Value_V6                                              Y    Y    Y    Y       0x06
+# TASK_GATT
+32     0020     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00A("Service A")}
+33     0021     2802                                Include                                               Y    N    N    N       {handle=0x0001,end_group_handle=0x0005,UUID=0xA00D}
+34     0022     2802                                Include                                               Y    N    N    N       {handle=0x0090,end_group_handle=0x0096,UUID=0xA00E}
+35     0023     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0024,UUID=0xB001}
+36     0024     B001                                Value_V1                                              Y    N    N    N       0x01
+37     0025     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x0026,UUID=0xB002}
+38     0026     B002                                Value_V2                                              Y    Y    N    N       "11111222223333344444555556666677777888889999900000"
+39     0027     2803                                Characteristic                                        Y    N    N    N       {properties=0x08,handle=0x0028,UUID=0xB003}
+40     0028     B003                                Value_V3                                              N    Y    N    N       0x03
+# TASK_GATT
+48     0030     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00B("Service B.4")}
+49     0031     2803                                Characteristic                                        Y    N    N    N       {properties=0x08,handle=0x0032,UUID=0xB007}
+50     0032     B007                                Value_V7                                              N    Y    N    N       0x07
+# TASK_GAP
+64     0040     2800                                Primary_Service                                       Y    N    N    N       {Service=0x1800("Generic Access Profile")}
+65     0041     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0042,UUID=0x2A00}
+66     0042     2A00                                Device_Name                                           Y    N    N    N       "Test Database"
+67     0043     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0044,UUID=0x2A01}
+68     0044     2A01                                Appearance                                            Y    N    N    N       0x11
+69     0045     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0046,UUID=0x2A04}
+70     0046     2A04                                Peripheral_Preferred_Connection_Parameters            Y    N    N    N       {minimum_connection_interval=0x0064,maximum_connection_interval=0x00C8,slave_latency=0x0000,connection_supervision_timeout=0x07D0}
+# TASK_GATT
+80     0050     2800                                Primary_Service                                       Y    N    N    N       {Service=0x1801("Attribute Profile")}
+81     0051     2803                                Characteristic                                        Y    N    N    N       {properties=0x20,handle=0x0052,UUID=0x2A05}
+82     0052     2A05                                Service_Changed                                       N    N    Y    Y       {start_handle=0x0001,end_handle=0xFFFF}
+# TASK_GATT
+96     0060     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00B("Service B.1")}
+97     0061     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x0062,UUID=0xB004}
+98     0062     B004                                Value_V4                                              Y    Y    N    N       0x04
+# TASK_GATT
+112    0070     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00B("Service B.2")}
+113    0071     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x0072,UUID=0xB005}
+114    0072     B005                                Value_V5                                              Y    Y    N    N       0x05
+115    0073     2900                                Characteristic_Extended_Properties                    Y    N    N    N       {extended_properties=0x0003}
+116    0074     2901                                Characteristic_User_Description                       Y    Y    N    N       "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+117    0075     2904                                Characteristic_Format                                 Y    N    N    N       {format=0x04,exp=0x00,unit=0x3001,n_sp=0x00,descr=0x3111}
+118    0076     0000D5D4000000000123456789ABCDEF    Descriptor_V5D4_(128-bit_UUID)                        Y    N    N    N       0x44
+# TASK_GATT
+128    0080     2800                                Primary_Service                                       Y    N    N    N       {Service=0xA00B("Service B.5")}
+129    0081     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0082,UUID=0xB008}
+130    0082     B008                                Value_V8                                              Y    N    N    N       0x08
+# TASK_GATT
+144    0090     2800                                Primary_Service                                       Y    N    N    N       {Service=0x0000A00C000000000123456789ABCDEF("Service C.1")}
+145    0091     2802                                Include                                               Y    N    N    N       {handle=0x0001,end_group_handle=0x0005,UUID=0xA00D}
+146    0092     2803                                Characteristic                                        Y    N    N    N       {properties=0x8A,handle=0x0093,UUID=0x0000B009000000000123456789ABCDEF}
+147    0093     0000B009000000000123456789ABCDEF    Value_V9(128-bit_UUID)                                Y    Y    N    N       0x09
+148    0094     2900                                Characteristic_Extended_Properties                    Y    N    N    N       {extended_properties=0x0001}
+149    0095     0000D9D2000000000123456789ABCDEF    Descriptor_V9D2(128-bit_UUID)                         Y    Y    N    N       0x22
+150    0096     0000D9D3000000000123456789ABCDEF    Descriptor_V9D3(128-bit_UUID)                         N    Y    N    N       0x33
+# TASK_GATT
+160    00A0     2800                                Primary_Service                                       Y    N    N    N       {Service=0x0000A00C000000000123456789ABCDEF("Service C.2")}
+161    00A1     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x00A2,UUID=0xB00A}
+162    00A2     B00A                                Value_V10                                             Y    N    N    N       0x0A
+163    00A3     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00A4,UUID=0xB002}
+164    00A4     B002                                Value_V2                                              Y    Y    N    N       "111112222233333444445"
+165    00A5     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00A6,UUID=0xB002}
+166    00A6     B002                                Value_V2                                              Y    Y    N    N       "2222233333444445555566"
+167    00A7     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00A8,UUID=0xB002}
+168    00A8     B002                                Value_V2                                              Y    Y    N    N       "33333444445555566666777"
+169    00A9     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00AA,UUID=0xB002}
+170    00AA     B002                                Value_V2                                              Y    Y    N    N       "1111122222333334444455555666667777788888999"
+171    00AB     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00AC,UUID=0xB002}
+172    00AC     B002                                Value_V2                                              Y    Y    N    N       "22222333334444455555666667777788888999990000"
+173    00AD     2803                                Characteristic                                        Y    N    N    N       {properties=0x0A,handle=0x00AE,UUID=0xB002}
+174    00AE     B002                                Value_V2                                              Y    Y    N    N       "333334444455555666667777788888999990000011111"
+# End

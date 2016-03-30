@@ -1,0 +1,39 @@
+//
+// Prefix header for all source files of the 'iOS' target in the 'iOS' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+
+/// 3.xx : Big endian 15 chara.
+/// 4.xx : Little endian.
+/// 4.13 : delegate update service/char for profile.
+/// 4.14 : 128bits write/notify char.
+/// 4.15 : clean unuseful error warning.
+/// 4.16 : verify warning button and warning conment.
+/// 4.17 : bug2 ?
+/// 4.18 : add FW no rsp timeout
+/// 4.19 : disconnect a peripheral when get a error.
+/// 4.20 : Without Length error warning.
+/// 4.22 : set all warning msg with OK button.
+
+#define QBLUE_OTA_VERSION            (4.22)
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define _ENABLE_OTA_DBG_     1
+
+#else
+#define NSLog(...) {}
+#define _ENABLE_OTA_DBG_     0
+
+#endif
+
+#endif

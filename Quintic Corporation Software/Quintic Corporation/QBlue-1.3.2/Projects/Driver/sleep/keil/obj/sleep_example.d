@@ -1,0 +1,16 @@
+.\obj\sleep_example.o: ..\src\sleep_example.c
+.\obj\sleep_example.o: ..\..\src\driver\gpio.h
+.\obj\sleep_example.o: ..\src\driver_config.h
+.\obj\sleep_example.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\sleep_example.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdbool.h
+.\obj\sleep_example.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\obj\sleep_example.o: ..\..\src\cmsis\driver_QN9020.h
+.\obj\sleep_example.o: ..\..\src\cmsis\QN9020.h
+.\obj\sleep_example.o: ..\..\src\cmsis\core_cm0.h
+.\obj\sleep_example.o: ..\..\src\cmsis\core_cmInstr.h
+.\obj\sleep_example.o: ..\..\src\cmsis\core_cmFunc.h
+.\obj\sleep_example.o: ..\..\src\driver\timer.h
+.\obj\sleep_example.o: ..\..\src\driver\sleep.h
+.\obj\sleep_example.o: ..\..\src\driver\syscon.h
+.\obj\sleep_example.o: ..\src\system.h
+.\obj\sleep_example.o: ..\..\src\lib\calibration.h

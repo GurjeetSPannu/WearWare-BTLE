@@ -1,0 +1,129 @@
+Dependencies for Project 'i2c', Target 'i2c': (DO NOT MODIFY !)
+F (..\..\src\startup\keil\startup.s)(0x551B3698)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020--pd "__UVISION_VERSION SETA 514"--list .\startup.lst --xref -o .\obj\startup.o --depend .\obj\startup.d)
+F (..\src\system.c)(0x551B3694)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\system.o --omf_browse .\obj\system.crf --depend .\obj\system.d)
+I (..\src\system.h)(0x551B3694)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+I (..\..\src\driver\uart.h)(0x551B3697)
+I (..\..\src\driver\sleep.h)(0x551B3697)
+I (..\..\src\driver\gpio.h)(0x551B3697)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
+I (..\..\src\driver\spi.h)(0x551B3697)
+I (..\..\src\driver\timer.h)(0x551B3697)
+I (..\..\src\driver\pwm.h)(0x551B3697)
+I (..\..\src\driver\dma.h)(0x551B3697)
+I (..\..\src\driver\serialflash.h)(0x551B3697)
+I (..\..\src\driver\adc.h)(0x551B3697)
+I (..\..\src\driver\analog.h)(0x551B3697)
+I (..\..\src\lib\calibration.h)(0x551B3697)
+F (..\..\src\driver\adc.c)(0x551B3697)()
+F (..\..\src\driver\analog.c)(0x551B3697)()
+F (..\..\src\driver\dma.c)(0x551B3697)()
+F (..\..\src\driver\gpio.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\gpio.o --omf_browse .\obj\gpio.crf --depend .\obj\gpio.d)
+I (..\..\src\driver\gpio.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\sleep.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+F (..\..\src\driver\i2c.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\i2c.o --omf_browse .\obj\i2c.crf --depend .\obj\i2c.d)
+I (..\..\src\driver\i2c.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+F (..\..\src\driver\pwm.c)(0x551B3697)()
+F (..\..\src\driver\rtc.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\rtc.o --omf_browse .\obj\rtc.crf --depend .\obj\rtc.d)
+I (..\..\src\driver\rtc.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (C:\Keil_v5\ARM\ARMCC\include\time.h)(0x5476D400)
+F (..\..\src\driver\serialflash.c)(0x551B3697)()
+F (..\..\src\driver\sleep.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\sleep.o --omf_browse .\obj\sleep.crf --depend .\obj\sleep.d)
+I (..\..\src\driver\sleep.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+I (..\..\src\driver\gpio.h)(0x551B3697)
+I (..\..\src\driver\intc.h)(0x551B3697)
+I (..\..\src\lib\lib.h)(0x551B3698)
+F (..\..\src\driver\spi.c)(0x551B3697)()
+F (..\..\src\driver\syscon.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\syscon.o --omf_browse .\obj\syscon.crf --depend .\obj\syscon.d)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\timer.h)(0x551B3697)
+I (..\..\src\driver\sleep.h)(0x551B3697)
+I (..\..\src\driver\gpio.h)(0x551B3697)
+I (..\..\src\driver\rtc.h)(0x551B3697)
+F (..\..\src\driver\timer.c)(0x551B3697)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\timer.o --omf_browse .\obj\timer.crf --depend .\obj\timer.d)
+I (..\..\src\driver\timer.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\sleep.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+I (..\..\src\driver\gpio.h)(0x551B3697)
+F (..\..\src\driver\uart.c)(0x551B3697)()
+F (..\..\src\driver\wdt.c)(0x551B3697)()
+F (..\..\src\lib\keil\qn902xb2_lib_lite.lib)(0x551B3698)()
+F (..\src\i2c_example.c)(0x551B3693)(-c --cpu Cortex-M0 -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I..\src -I..\..\src\driver -I..\..\src\fw -I..\..\src\cmsis -I..\..\src\lib --c99-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Quintic\QN9020-D__UVISION_VERSION="514"-o .\obj\i2c_example.o --omf_browse .\obj\i2c_example.crf --depend .\obj\i2c_example.d)
+I (..\..\src\driver\i2c.h)(0x551B3697)
+I (..\src\driver_config.h)(0x551B3693)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
+I (..\..\src\cmsis\driver_QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\QN9020.h)(0x551B3697)
+I (..\..\src\cmsis\core_cm0.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmInstr.h)(0x551B3697)
+I (..\..\src\cmsis\core_cmFunc.h)(0x551B3697)
+I (..\..\src\driver\syscon.h)(0x551B3697)
+I (..\src\system.h)(0x551B3694)

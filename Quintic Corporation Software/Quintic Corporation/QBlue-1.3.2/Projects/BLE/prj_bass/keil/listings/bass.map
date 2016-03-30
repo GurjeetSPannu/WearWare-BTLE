@@ -1,0 +1,1342 @@
+Product: MDK-ARM Lite 5.10
+Component: ARM Compiler 5.04 update 1 (build 49)
+Tool: armlink [5040049]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for __initial_sp
+    startup.o(RESET) refers to startup.o(.text) for Reset_Handler
+    startup.o(RESET) refers to gpio.o(i.GPIO_IRQHandler) for GPIO_IRQHandler
+    startup.o(RESET) refers to analog.o(i.COMPARATOR0_IRQHandler) for COMPARATOR0_IRQHandler
+    startup.o(RESET) refers to analog.o(i.COMPARATOR1_IRQHandler) for COMPARATOR1_IRQHandler
+    startup.o(RESET) refers to lib.o(i.BLE_IRQHandler) for BLE_IRQHandler
+    startup.o(RESET) refers to sleep.o(i.OSC_EN_IRQHandler) for OSC_EN_IRQHandler
+    startup.o(RESET) refers to adc.o(i.ADC_IRQHandler) for ADC_IRQHandler
+    startup.o(RESET) refers to uart.o(i.UART0_TX_IRQHandler) for UART0_TX_IRQHandler
+    startup.o(RESET) refers to uart.o(i.UART0_RX_IRQHandler) for UART0_RX_IRQHandler
+    startup.o(RESET) refers to timer.o(i.TIMER0_IRQHandler) for TIMER0_IRQHandler
+    startup.o(RESET) refers to timer.o(i.TIMER1_IRQHandler) for TIMER1_IRQHandler
+    startup.o(RESET) refers to timer.o(i.TIMER2_IRQHandler) for TIMER2_IRQHandler
+    startup.o(RESET) refers to timer.o(i.TIMER3_IRQHandler) for TIMER3_IRQHandler
+    startup.o(RESET) refers to wdt.o(i.WDT_IRQHandler) for WDT_IRQHandler
+    startup.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    app_main.o(i.assert_err) refers to printf8.o(i.__0printf$8) for __2printf
+    app_main.o(i.assert_warn) refers to printf8.o(i.__0printf$8) for __2printf
+    app_main.o(i.main) refers to lib.o(i.dc_dc_enable) for dc_dc_enable
+    app_main.o(i.main) refers to lib.o(i.plf_init) for plf_init
+    app_main.o(i.main) refers to system.o(i.SystemInit) for SystemInit
+    app_main.o(i.main) refers to lib.o(i.ble_init) for ble_init
+    app_main.o(i.main) refers to app_env.o(i.app_init) for app_init
+    app_main.o(i.main) refers to usr_design.o(i.usr_init) for usr_init
+    app_main.o(i.main) refers to sleep.o(i.sleep_init) for sleep_init
+    app_main.o(i.main) refers to sleep.o(i.wakeup_by_sleep_timer) for wakeup_by_sleep_timer
+    app_main.o(i.main) refers to lib.o(i.ke_schedule) for ke_schedule
+    app_main.o(i.main) refers to sleep.o(i.usr_sleep) for usr_sleep
+    app_main.o(i.main) refers to lib.o(i.ble_sleep) for ble_sleep
+    app_main.o(i.main) refers to led.o(i.led_set) for led_set
+    app_main.o(i.main) refers to sleep.o(i.enter_sleep) for enter_sleep
+    app_main.o(i.main) refers to prf_utils.o(i.prf_init) for prf_init
+    app_main.o(i.main) refers to prf_utils.o(i.prf_dispatch_disconnect) for prf_dispatch_disconnect
+    app_main.o(i.main) refers to app_main.o(.bss) for .bss
+    app_main.o(i.main) refers to sleep.o(i.sleep_cb) for sleep_cb
+    system.o(i.SystemInit) refers to system.o(i.timer_clock_off) for timer_clock_off
+    system.o(i.SystemInit) refers to system.o(i.uart_clock_off) for uart_clock_off
+    system.o(i.SystemInit) refers to system.o(i.spi_clock_off) for spi_clock_off
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_sysclk_src) for syscon_set_sysclk_src
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_ahb_clk) for syscon_set_ahb_clk
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_ble_clk) for syscon_set_ble_clk
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_apb_clk) for syscon_set_apb_clk
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_timer_clk) for syscon_set_timer_clk
+    system.o(i.SystemInit) refers to syscon.o(i.syscon_set_usart_clk) for syscon_set_usart_clk
+    system.o(i.SystemInit) refers to gpio.o(i.gpio_init) for gpio_init
+    system.o(i.SystemInit) refers to led.o(i.led_init) for led_init
+    system.o(i.SystemInit) refers to button.o(i.button_init) for button_init
+    system.o(i.SystemInit) refers to uart.o(i.uart_init) for uart_init
+    system.o(i.SystemInit) refers to usr_design.o(i.gpio_interrupt_callback) for gpio_interrupt_callback
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to analog.o(i.battery_monitor_enable) for battery_monitor_enable
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to adc.o(i.adc_init) for adc_init
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to adc.o(i.adc_decimation_enable) for adc_decimation_enable
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to adc.o(i.adc_read) for adc_read
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to usr_design.o(i.adc_sample_complete_callback) for adc_sample_complete_callback
+    usr_design.o(i.app_bass_batt_level_timer_handler) refers to usr_design.o(.data) for .data
+    usr_design.o(i.app_button_timer_handler) refers to gpio.o(i.gpio_read_pin) for gpio_read_pin
+    usr_design.o(i.app_button_timer_handler) refers to app_main.o(i.assert_err) for assert_err
+    usr_design.o(i.app_button_timer_handler) refers to app_gap.o(i.app_gap_adv_stop_req) for app_gap_adv_stop_req
+    usr_design.o(i.app_button_timer_handler) refers to app_util.o(i.app_get_local_service_flag) for app_get_local_service_flag
+    usr_design.o(i.app_button_timer_handler) refers to app_util.o(i.app_set_scan_rsp_data) for app_set_scan_rsp_data
+    usr_design.o(i.app_button_timer_handler) refers to app_util.o(i.app_set_adv_data) for app_set_adv_data
+    usr_design.o(i.app_button_timer_handler) refers to app_gap.o(i.app_gap_adv_start_req) for app_gap_adv_start_req
+    usr_design.o(i.app_button_timer_handler) refers to sleep.o(.data) for sleep_env
+    usr_design.o(i.app_button_timer_handler) refers to app_bass_task.o(.data) for app_bass_env
+    usr_design.o(i.app_button_timer_handler) refers to app_env.o(.bss) for app_env
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to analog.o(i.battery_monitor_enable) for battery_monitor_enable
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to adc.o(i.ADC_RESULT_mV) for ADC_RESULT_mV
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to idiv.o(.text) for __aeabi_idivmod
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to app_bass.o(i.app_bass_batt_level_upd_req) for app_bass_batt_level_upd_req
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to usr_design.o(.data) for .data
+    usr_design.o(i.app_event_adc_sample_cmp_handler) refers to app_bass_task.o(.data) for app_bass_env
+    usr_design.o(i.app_event_button1_press_handler) refers to sleep.o(i.wakeup_32k_xtal_start_timer) for wakeup_32k_xtal_start_timer
+    usr_design.o(i.app_event_button1_press_handler) refers to sleep.o(.data) for sleep_env
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to usr_design.o(i.usr_led1_set) for usr_led1_set
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to app_util.o(i.app_get_local_service_flag) for app_get_local_service_flag
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to app_util.o(i.app_set_scan_rsp_data) for app_set_scan_rsp_data
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to app_util.o(i.app_set_adv_data) for app_set_adv_data
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to app_gap.o(i.app_gap_adv_start_req) for app_gap_adv_start_req
+    usr_design.o(i.app_gap_adv_intv_update_timer_handler) refers to app_env.o(.bss) for app_env
+    usr_design.o(i.app_led_timer_handler) refers to led.o(i.led_get) for led_get
+    usr_design.o(i.app_led_timer_handler) refers to led.o(i.led_set) for led_set
+    usr_design.o(i.app_led_timer_handler) refers to usr_design.o(.data) for .data
+    usr_design.o(i.app_task_msg_hdl) refers to usr_design.o(i.usr_led1_set) for usr_led1_set
+    usr_design.o(i.app_task_msg_hdl) refers to app_util.o(i.app_get_local_service_flag) for app_get_local_service_flag
+    usr_design.o(i.app_task_msg_hdl) refers to app_util.o(i.app_set_scan_rsp_data) for app_set_scan_rsp_data
+    usr_design.o(i.app_task_msg_hdl) refers to app_util.o(i.app_set_adv_data) for app_set_adv_data
+    usr_design.o(i.app_task_msg_hdl) refers to app_gap.o(i.app_gap_adv_start_req) for app_gap_adv_start_req
+    usr_design.o(i.app_task_msg_hdl) refers to app_util.o(i.app_get_role) for app_get_role
+    usr_design.o(i.app_task_msg_hdl) refers to app_gap.o(i.app_gap_param_update_req) for app_gap_param_update_req
+    usr_design.o(i.app_task_msg_hdl) refers to usr_design.o(i.app_bass_batt_level_timer_handler) for app_bass_batt_level_timer_handler
+    usr_design.o(i.app_task_msg_hdl) refers to app_env.o(.bss) for app_env
+    usr_design.o(i.app_task_msg_hdl) refers to app_bass_task.o(.data) for app_bass_env
+    usr_design.o(i.gpio_interrupt_callback) refers to usr_design.o(i.usr_button1_cb) for usr_button1_cb
+    usr_design.o(i.usr_button1_cb) refers to lib.o(i.ble_ext_wakeup_allow) for ble_ext_wakeup_allow
+    usr_design.o(i.usr_button1_cb) refers to sleep.o(i.wakeup_32k_xtal_switch_clk) for wakeup_32k_xtal_switch_clk
+    usr_design.o(i.usr_button1_cb) refers to sleep.o(.data) for sleep_env
+    usr_design.o(i.usr_init) refers to app_main.o(i.assert_err) for assert_err
+    usr_design.o(i.usr_init) refers to usr_design.o(i.app_event_button1_press_handler) for app_event_button1_press_handler
+    usr_design.o(i.usr_init) refers to usr_design.o(i.app_event_adc_sample_cmp_handler) for app_event_adc_sample_cmp_handler
+    usr_design.o(i.usr_led1_set) refers to led.o(i.led_set) for led_set
+    usr_design.o(i.usr_led1_set) refers to usr_design.o(.data) for .data
+    usr_design.o(i.usr_sleep_restore) refers to uart.o(i.uart_init) for uart_init
+    app_util.o(i.app_add_bonded_dev) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_util.o(i.app_add_bonded_dev) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_clear_local_service_flag) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_create_server_service_DB) refers to app_bass.o(i.app_bass_create_db) for app_bass_create_db
+    app_util.o(i.app_create_server_service_DB) refers to app_bass_task.o(.data) for app_bass_env
+    app_util.o(i.app_enable_server_service) refers to app_bass.o(i.app_bass_enable_req) for app_bass_enable_req
+    app_util.o(i.app_enable_server_service) refers to app_bass_task.o(.data) for app_bass_env
+    app_util.o(i.app_find_bonded_dev) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_bd_addr_by_conhdl) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_util.o(i.app_get_bd_addr_by_conhdl) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_bond_nb) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_bond_status) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_conhdl_by_bdaddr) refers to app_main.o(i.assert_err) for assert_err
+    app_util.o(i.app_get_conhdl_by_bdaddr) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_conhdl_by_idx) refers to app_util.o(i.app_get_link_status_by_idx) for app_get_link_status_by_idx
+    app_util.o(i.app_get_conhdl_by_idx) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_link_status_by_idx) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_lk_sec_status) refers to app_util.o(i.app_find_bonded_dev) for app_find_bonded_dev
+    app_util.o(i.app_get_lk_sec_status) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_get_role) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_i_to_array) refers to uidiv.o(.text) for __aeabi_uidivmod
+    app_util.o(i.app_init_local_smp_key) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_util.o(i.app_init_local_smp_key) refers to app_smp.o(i.app_smpm_set_key_req) for app_smpm_set_key_req
+    app_util.o(i.app_init_local_smp_key) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_set_adv_data) refers to strcpy.o(.text) for strcpy
+    app_util.o(i.app_set_adv_data) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_set_link_status_by_conhdl) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_util.o(i.app_set_link_status_by_conhdl) refers to app_util.o(i.app_get_bd_addr_by_conhdl) for app_get_bd_addr_by_conhdl
+    app_util.o(i.app_set_link_status_by_conhdl) refers to memseta.o(.text) for __aeabi_memclr4
+    app_util.o(i.app_set_link_status_by_conhdl) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_set_role) refers to app_env.o(.bss) for app_env
+    app_util.o(i.app_set_scan_rsp_data) refers to app_env.o(.bss) for app_env
+    app_env.o(i.app_bass_init) refers to app_bass_task.o(.data) for app_bass_env
+    app_env.o(i.app_init) refers to memseta.o(.text) for __aeabi_memclr4
+    app_env.o(i.app_init) refers to app_util.o(i.app_set_adv_data) for app_set_adv_data
+    app_env.o(i.app_init) refers to app_util.o(i.app_set_scan_rsp_data) for app_set_scan_rsp_data
+    app_env.o(i.app_init) refers to app_env.o(i.app_smp_init) for app_smp_init
+    app_env.o(i.app_init) refers to app_util.o(i.app_get_local_service_flag) for app_get_local_service_flag
+    app_env.o(i.app_init) refers to app_task.o(i.task_app_desc_register) for task_app_desc_register
+    app_env.o(i.app_init) refers to app_env.o(i.app_bass_init) for app_bass_init
+    app_env.o(i.app_init) refers to app_sys.o(i.app_uart_init) for app_uart_init
+    app_env.o(i.app_init) refers to app_env.o(.bss) for .bss
+    app_env.o(i.app_smp_init) refers to memcpya.o(.text) for __aeabi_memcpy4
+    app_env.o(i.app_smp_init) refers to app_env.o(.bss) for .bss
+    app_printf.o(i.eaddr) refers to app_printf.o(.data) for .data
+    app_printf.o(i.iaddr) refers to idiv.o(.text) for __aeabi_idivmod
+    app_printf.o(i.iaddr) refers to app_printf.o(.data) for .data
+    app_printf.o(i.number) refers to uidiv.o(.text) for __aeabi_uidivmod
+    app_printf.o(i.number) refers to app_printf.o(.data) for .data
+    app_printf.o(i.qsprintf) refers to app_printf.o(i.skip_atoi) for skip_atoi
+    app_printf.o(i.qsprintf) refers to app_printf.o(i.iaddr) for iaddr
+    app_printf.o(i.qsprintf) refers to app_printf.o(i.eaddr) for eaddr
+    app_printf.o(i.qsprintf) refers to app_printf.o(i.number) for number
+    app_printf.o(i.qtrace) refers to printf8.o(i.__0printf$8) for __2printf
+    app_printf.o(.data) refers to app_printf.o(.conststring) for .conststring
+    app_task.o(i.task_app_desc_register) refers to app_task.o(.constdata) for .constdata
+    app_task.o(i.task_app_desc_register) refers to app_task.o(.data) for .data
+    app_task.o(.constdata) refers to app_task.o(i.app_32k_xtal_wakeup_timer) for app_32k_xtal_wakeup_timer
+    app_task.o(.constdata) refers to usr_design.o(i.app_led_timer_handler) for app_led_timer_handler
+    app_task.o(.constdata) refers to usr_design.o(i.app_gap_adv_intv_update_timer_handler) for app_gap_adv_intv_update_timer_handler
+    app_task.o(.constdata) refers to usr_design.o(i.app_button_timer_handler) for app_button_timer_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_reset_req_cmp_handler) for app_gap_reset_req_cmp_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_set_sec_req_cmp_evt_handler) for app_gap_set_sec_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_read_ver_req_cmp_evt_handler) for app_gap_read_ver_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_read_bdaddr_req_cmp_evt_handler) for app_gap_read_bdaddr_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_ready_evt_handler) for app_gap_ready_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_set_devname_req_cmp_evt_handler) for app_gap_set_devname_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_adv_req_cmp_evt_handler) for app_gap_adv_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_param_update_resp_handler) for app_gap_param_update_resp_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_set_privacy_req_cmp_handler) for app_gap_set_privacy_req_cmp_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_change_param_req_cmp_handler) for app_gap_change_param_req_cmp_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_set_mode_req_cmp_evt_handler) for app_gap_set_mode_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) for app_gap_le_create_conn_req_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_discon_cmp_evt_handler) for app_gap_discon_cmp_evt_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_bond_req_ind_handler) for app_gap_bond_req_ind_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) for app_gap_bond_req_cmp_ind_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gap_set_random_add_req_cmp_handler) for app_gap_set_random_add_req_cmp_handler
+    app_task.o(.constdata) refers to app_gap_task.o(i.app_gatt_resource_access_req_handler) for app_gatt_resource_access_req_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpm_set_key_cfm_handler) for app_smpm_set_key_cfm_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_key_ind_handler) for app_smpc_key_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_tk_req_ind_handler) for app_smpc_tk_req_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_ltk_req_ind_handler) for app_smpc_ltk_req_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_irk_req_ind_handler) for app_smpc_irk_req_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_chk_bd_addr_req_ind_handler) for app_smpc_chk_bd_addr_req_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_sec_started_ind_handler) for app_smpc_sec_started_ind_handler
+    app_task.o(.constdata) refers to app_smp_task.o(i.app_smpc_timeout_evt_handler) for app_smpc_timeout_evt_handler
+    app_task.o(.constdata) refers to app_bass_task.o(i.app_bass_create_db_cfm_handler) for app_bass_create_db_cfm_handler
+    app_task.o(.constdata) refers to app_bass_task.o(i.app_bass_disable_ind_handler) for app_bass_disable_ind_handler
+    app_task.o(.constdata) refers to app_bass_task.o(i.app_bass_error_ind_handler) for app_bass_error_ind_handler
+    app_task.o(.constdata) refers to app_bass_task.o(i.app_bass_batt_level_upd_cfm_handler) for app_bass_batt_level_upd_cfm_handler
+    app_task.o(.constdata) refers to app_bass_task.o(i.app_bass_batt_level_ntf_cfg_ind_handler) for app_bass_batt_level_ntf_cfg_ind_handler
+    app_task.o(.constdata) refers to usr_design.o(i.app_bass_batt_level_timer_handler) for app_bass_batt_level_timer_handler
+    app_task.o(.constdata) refers to app_task.o(.constdata) for app_default_state
+    app_gap.o(i.app_gap_adv_start_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap.o(i.app_gap_bond_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap.o(i.app_gap_bond_req) refers to app_env.o(.bss) for app_env
+    app_gap.o(i.app_gap_param_update_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap.o(i.app_gap_security_req) refers to app_util.o(i.app_get_conhdl_by_bdaddr) for app_get_conhdl_by_bdaddr
+    app_gap.o(i.app_gap_security_req) refers to app_util.o(i.app_find_bonded_dev) for app_find_bonded_dev
+    app_gap.o(i.app_gap_security_req) refers to app_util.o(i.app_get_role) for app_get_role
+    app_gap.o(i.app_gap_security_req) refers to app_smp.o(i.app_smpc_start_enc_req) for app_smpc_start_enc_req
+    app_gap.o(i.app_gap_security_req) refers to app_gap.o(i.app_gap_bond_req) for app_gap_bond_req
+    app_gap.o(i.app_gap_security_req) refers to app_env.o(.bss) for app_env
+    app_gap.o(i.app_gap_set_devname_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap.o(i.app_gap_set_random_addr_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap.o(i.app_gap_unpair_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_gap_task.o(i.app_correct_rssi) refers to dflti.o(.text) for __aeabi_i2d
+    app_gap_task.o(i.app_correct_rssi) refers to dmul.o(.text) for __aeabi_dmul
+    app_gap_task.o(i.app_correct_rssi) refers to dadd.o(.text) for __aeabi_dadd
+    app_gap_task.o(i.app_correct_rssi) refers to dfixi.o(.text) for __aeabi_d2iz
+    app_gap_task.o(i.app_device_setup) refers to app_gap.o(i.app_gap_set_sec_req) for app_gap_set_sec_req
+    app_gap_task.o(i.app_gap_adv_req_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_adv_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to app_gap_task.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to app_util.o(i.app_add_bonded_dev) for app_add_bonded_dev
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to app_gap_task.o(.conststring) for .conststring
+    app_gap_task.o(i.app_gap_bond_req_cmp_ind_handler) refers to app_env.o(.bss) for app_env
+    app_gap_task.o(i.app_gap_bond_req_ind_handler) refers to app_util.o(i.app_get_conhdl_by_idx) for app_get_conhdl_by_idx
+    app_gap_task.o(i.app_gap_bond_req_ind_handler) refers to app_gap.o(i.app_gap_bond_resp) for app_gap_bond_resp
+    app_gap_task.o(i.app_gap_bond_req_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_bond_req_ind_handler) refers to app_env.o(.bss) for app_env
+    app_gap_task.o(i.app_gap_bond_req_ind_handler) refers to app_gap_task.o(.conststring) for .conststring
+    app_gap_task.o(i.app_gap_change_param_req_cmp_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_change_param_req_cmp_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_change_param_req_cmp_handler) refers to app_gap_task.o(.conststring) for .conststring
+    app_gap_task.o(i.app_gap_discon_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_discon_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_discon_cmp_evt_handler) refers to app_util.o(i.app_get_bd_addr_by_conhdl) for app_get_bd_addr_by_conhdl
+    app_gap_task.o(i.app_gap_discon_cmp_evt_handler) refers to app_util.o(i.app_set_link_status_by_conhdl) for app_set_link_status_by_conhdl
+    app_gap_task.o(i.app_gap_discon_cmp_evt_handler) refers to app_util.o(i.app_enable_server_service) for app_enable_server_service
+    app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) refers to app_util.o(i.app_set_role) for app_set_role
+    app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) refers to app_util.o(i.app_set_link_status_by_conhdl) for app_set_link_status_by_conhdl
+    app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) refers to app_util.o(i.app_enable_server_service) for app_enable_server_service
+    app_gap_task.o(i.app_gap_le_create_conn_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_param_update_resp_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_param_update_resp_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_read_bdaddr_req_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_read_bdaddr_req_cmp_evt_handler) refers to app_util.o(i.app_create_server_service_DB) for app_create_server_service_DB
+    app_gap_task.o(i.app_gap_read_bdaddr_req_cmp_evt_handler) refers to app_util.o(i.app_init_local_smp_key) for app_init_local_smp_key
+    app_gap_task.o(i.app_gap_read_bdaddr_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_read_ver_req_cmp_evt_handler) refers to app_gap.o(i.app_gap_read_bdaddr_req) for app_gap_read_bdaddr_req
+    app_gap_task.o(i.app_gap_read_ver_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_ready_evt_handler) refers to app_gap.o(i.app_gap_set_sec_req) for app_gap_set_sec_req
+    app_gap_task.o(i.app_gap_ready_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_reset_req_cmp_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_set_devname_req_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_set_devname_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_set_mode_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_gap_task.o(i.app_gap_set_mode_req_cmp_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_set_privacy_req_cmp_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_set_random_add_req_cmp_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_gap_task.o(i.app_gap_set_sec_req_cmp_evt_handler) refers to app_gap.o(i.app_gap_read_ver_req) for app_gap_read_ver_req
+    app_gap_task.o(i.app_gap_set_sec_req_cmp_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_smp.o(i.app_smpc_chk_bd_addr_req_rsp) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp.o(i.app_smpc_irk_req_rsp) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp.o(i.app_smpc_ltk_req_rsp) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp.o(i.app_smpc_start_enc_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp.o(i.app_smpc_tk_req_rsp) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp.o(i.app_smpm_set_key_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp_task.o(i.app_smpc_chk_bd_addr_req_ind_handler) refers to app_util.o(i.app_get_lk_sec_status) for app_get_lk_sec_status
+    app_smp_task.o(i.app_smpc_chk_bd_addr_req_ind_handler) refers to app_smp.o(i.app_smpc_chk_bd_addr_req_rsp) for app_smpc_chk_bd_addr_req_rsp
+    app_smp_task.o(i.app_smpc_chk_bd_addr_req_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_chk_bd_addr_req_ind_handler) refers to app_smp_task.o(.conststring) for .conststring
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to app_util.o(i.app_get_bond_nb) for app_get_bond_nb
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to app_util.o(i.app_get_bond_status) for app_get_bond_status
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to app_smp.o(i.app_smpc_irk_req_rsp) for app_smpc_irk_req_rsp
+    app_smp_task.o(i.app_smpc_irk_req_ind_handler) refers to app_env.o(.bss) for app_env
+    app_smp_task.o(i.app_smpc_key_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_key_ind_handler) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp_task.o(i.app_smpc_key_ind_handler) refers to app_env.o(.bss) for app_env
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to app_util.o(i.app_find_bonded_dev) for app_find_bonded_dev
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to app_util.o(i.app_get_role) for app_get_role
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to memcpya.o(.text) for __aeabi_memcpy
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to app_smp.o(i.app_smpc_ltk_req_rsp) for app_smpc_ltk_req_rsp
+    app_smp_task.o(i.app_smpc_ltk_req_ind_handler) refers to app_env.o(.bss) for app_env
+    app_smp_task.o(i.app_smpc_sec_started_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_sec_started_ind_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_smp_task.o(i.app_smpc_sec_started_ind_handler) refers to app_smp_task.o(.conststring) for .conststring
+    app_smp_task.o(i.app_smpc_timeout_evt_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_timeout_evt_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_smp_task.o(i.app_smpc_timeout_evt_handler) refers to app_env.o(.bss) for app_env
+    app_smp_task.o(i.app_smpc_tk_req_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_smp_task.o(i.app_smpc_tk_req_ind_handler) refers to atoi.o(.text) for atoi
+    app_smp_task.o(i.app_smpc_tk_req_ind_handler) refers to app_util.o(i.app_i_to_array) for app_i_to_array
+    app_smp_task.o(i.app_smpc_tk_req_ind_handler) refers to app_smp.o(i.app_smpc_tk_req_rsp) for app_smpc_tk_req_rsp
+    app_smp_task.o(i.app_smpc_tk_req_ind_handler) refers to app_env.o(.bss) for app_env
+    app_smp_task.o(i.app_smpm_set_key_cfm_handler) refers to app_gap.o(i.app_gap_set_bondable_mode_req) for app_gap_set_bondable_mode_req
+    app_bass_task.o(i.app_bass_batt_level_ntf_cfg_ind_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_bass_task.o(i.app_bass_batt_level_ntf_cfg_ind_handler) refers to app_bass_task.o(.data) for .data
+    app_bass_task.o(i.app_bass_batt_level_upd_cfm_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_bass_task.o(i.app_bass_batt_level_upd_cfm_handler) refers to app_bass_task.o(.data) for .data
+    app_bass_task.o(i.app_bass_create_db_cfm_handler) refers to app_util.o(i.app_clear_local_service_flag) for app_clear_local_service_flag
+    app_bass_task.o(i.app_bass_disable_ind_handler) refers to usr_design.o(i.app_task_msg_hdl) for app_task_msg_hdl
+    app_bass_task.o(i.app_bass_disable_ind_handler) refers to app_bass_task.o(.data) for .data
+    app_bass_task.o(i.app_bass_error_ind_handler) refers to printf8.o(i.__0printf$8) for __2printf
+    app_bass_task.o(.data) refers to app_env.o(.bss) for app_env
+    app_bass.o(i.app_bass_enable_req) refers to memcpya.o(.text) for __aeabi_memcpy
+    prf_utils.o(i.prf_init) refers to bass.o(i.bass_init) for bass_init
+    bass_task.o(i.bass_batt_level_upd_req_handler) refers to bass.o(i.bass_batt_level_upd_cfm_send) for bass_batt_level_upd_cfm_send
+    bass_task.o(i.bass_batt_level_upd_req_handler) refers to bass.o(.bss) for bass_env
+    bass_task.o(i.bass_create_db_req_handler) refers to bass.o(.bss) for bass_env
+    bass_task.o(i.bass_create_db_req_handler) refers to bass.o(.constdata) for bas_att_db
+    bass_task.o(i.bass_enable_req_handler) refers to prf_utils.o(i.prf_server_error_ind_send) for prf_server_error_ind_send
+    bass_task.o(i.bass_enable_req_handler) refers to prf_utils.o(i.prf_pack_char_pres_fmt) for prf_pack_char_pres_fmt
+    bass_task.o(i.bass_enable_req_handler) refers to bass.o(.bss) for bass_env
+    bass_task.o(i.gap_discon_cmp_evt_handler) refers to bass.o(i.bass_disable) for bass_disable
+    bass_task.o(i.gap_discon_cmp_evt_handler) refers to bass.o(.bss) for bass_env
+    bass_task.o(i.gatt_notify_cmp_evt_handler) refers to bass.o(i.bass_batt_level_upd_cfm_send) for bass_batt_level_upd_cfm_send
+    bass_task.o(i.gatt_write_cmd_ind_handler) refers to bass.o(.bss) for bass_env
+    bass_task.o(i.task_bass_desc_register) refers to bass_task.o(.constdata) for .constdata
+    bass_task.o(i.task_bass_desc_register) refers to bass_task.o(.data) for .data
+    bass_task.o(.constdata) refers to bass_task.o(i.bass_create_db_req_handler) for bass_create_db_req_handler
+    bass_task.o(.constdata) refers to bass_task.o(i.bass_enable_req_handler) for bass_enable_req_handler
+    bass_task.o(.constdata) refers to bass_task.o(i.bass_batt_level_upd_req_handler) for bass_batt_level_upd_req_handler
+    bass_task.o(.constdata) refers to bass_task.o(i.gatt_write_cmd_ind_handler) for gatt_write_cmd_ind_handler
+    bass_task.o(.constdata) refers to bass_task.o(i.gatt_notify_cmp_evt_handler) for gatt_notify_cmp_evt_handler
+    bass_task.o(.constdata) refers to bass_task.o(i.gap_discon_cmp_evt_handler) for gap_discon_cmp_evt_handler
+    bass_task.o(.constdata) refers to bass_task.o(.constdata) for bass_default_state
+    bass_task.o(.constdata) refers to bass_task.o(.constdata) for bass_disabled
+    bass_task.o(.constdata) refers to bass_task.o(.constdata) for bass_idle
+    bass_task.o(.constdata) refers to bass_task.o(.constdata) for bass_connected
+    bass.o(i.bass_batt_level_upd_cfm_send) refers to bass.o(.bss) for .bss
+    bass.o(i.bass_disable) refers to bass.o(.bss) for .bss
+    bass.o(i.bass_init) refers to memseta.o(.text) for __aeabi_memclr
+    bass.o(i.bass_init) refers to bass_task.o(i.task_bass_desc_register) for task_bass_desc_register
+    bass.o(i.bass_init) refers to bass.o(.bss) for .bss
+    bass.o(.constdata) refers to bass.o(.constdata) for bas_svc
+    bass.o(.constdata) refers to bass.o(.constdata) for bas_batt_level_char
+    uart.o(i.UART0_RX_IRQHandler) refers to uart.o(.bss) for .bss
+    uart.o(i.UART0_TX_IRQHandler) refers to uart.o(i.uart_tx_int_enable) for uart_tx_int_enable
+    uart.o(i.UART0_TX_IRQHandler) refers to uart.o(.bss) for .bss
+    uart.o(i.uart_check_tx_free) refers to uart.o(.bss) for .bss
+    uart.o(i.uart_dump_register) refers to printf8.o(i.__0printf$8) for __2printf
+    uart.o(i.uart_flow_off) refers to uart.o(i.uart_check_tx_free) for uart_check_tx_free
+    uart.o(i.uart_flow_off) refers to gpio.o(i.gpio_write_pin) for gpio_write_pin
+    uart.o(i.uart_init) refers to uart.o(.bss) for .bss
+    uart.o(i.uart_init) refers to uart.o(.constdata) for .constdata
+    uart.o(i.uart_read) refers to uart.o(.bss) for .bss
+    uart.o(i.uart_tx_int_enable) refers to sleep.o(.data) for sleep_env
+    uart.o(i.uart_write) refers to uart.o(i.uart_tx_int_enable) for uart_tx_int_enable
+    uart.o(i.uart_write) refers to uart.o(.bss) for .bss
+    gpio.o(i.GPIO_IRQHandler) refers to gpio.o(.data) for .data
+    gpio.o(i.gpio_init) refers to gpio.o(.data) for .data
+    gpio.o(i.gpio_sleep_allowed) refers to gpio.o(i.gpio_read_pin_field) for gpio_read_pin_field
+    gpio.o(i.gpio_wakeup_config) refers to gpio.o(i.gpio_set_direction) for gpio_set_direction
+    sleep.o(i.enter_low_power_mode) refers to sleep.o(i.syscon_SetPGCR0WithMask) for syscon_SetPGCR0WithMask
+    sleep.o(i.enter_low_power_mode) refers to sleep.o(i.syscon_SetPGCR2WithMask) for syscon_SetPGCR2WithMask
+    sleep.o(i.enter_low_power_mode) refers to syscon.o(i.syscon_set_sysclk_src) for syscon_set_sysclk_src
+    sleep.o(i.enter_low_power_mode) refers to sleep.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    sleep.o(i.enter_low_power_mode) refers to sleep.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    sleep.o(i.enter_low_power_mode) refers to sleep.o(.data) for .data
+    sleep.o(i.enter_sleep) refers to sleep.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    sleep.o(i.enter_sleep) refers to sleep.o(i.syscon_SetPGCR0WithMask) for syscon_SetPGCR0WithMask
+    sleep.o(i.enter_sleep) refers to sleep.o(i.syscon_SetPGCR2WithMask) for syscon_SetPGCR2WithMask
+    sleep.o(i.enter_sleep) refers to sleep.o(i.syscon_SetIvrefX32WithMask) for syscon_SetIvrefX32WithMask
+    sleep.o(i.enter_sleep) refers to lib.o(i.check_ble_wakeup) for check_ble_wakeup
+    sleep.o(i.enter_sleep) refers to lib.o(i.set_dbg_info) for set_dbg_info
+    sleep.o(i.enter_sleep) refers to lib.o(i.sleep_post_process) for sleep_post_process
+    sleep.o(i.enter_sleep) refers to sleep.o(.data) for .data
+    sleep.o(i.restore_from_low_power_mode) refers to sleep.o(i.syscon_SetPGCR2WithMask) for syscon_SetPGCR2WithMask
+    sleep.o(i.restore_from_low_power_mode) refers to lib.o(i.check_ble_wakeup) for check_ble_wakeup
+    sleep.o(i.restore_from_low_power_mode) refers to lib.o(i.set_dbg_info) for set_dbg_info
+    sleep.o(i.restore_from_low_power_mode) refers to syscon.o(i.syscon_set_sysclk_src) for syscon_set_sysclk_src
+    sleep.o(i.restore_from_low_power_mode) refers to syscon.o(i.syscon_set_ahb_clk) for syscon_set_ahb_clk
+    sleep.o(i.restore_from_low_power_mode) refers to syscon.o(i.syscon_set_apb_clk) for syscon_set_apb_clk
+    sleep.o(i.sleep_cb) refers to lib.o(i.restore_ble_setting) for restore_ble_setting
+    sleep.o(i.sleep_cb) refers to usr_design.o(i.usr_sleep_restore) for usr_sleep_restore
+    sleep.o(i.sleep_init) refers to sleep.o(i.syscon_SetPGCR0WithMask) for syscon_SetPGCR0WithMask
+    sleep.o(i.sleep_init) refers to sleep.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    sleep.o(i.sleep_init) refers to sleep.o(.data) for .data
+    sleep.o(i.usr_sleep) refers to lib.o(i.ke_timer_empty) for ke_timer_empty
+    sleep.o(i.usr_sleep) refers to gpio.o(i.gpio_sleep_allowed) for gpio_sleep_allowed
+    sleep.o(i.usr_sleep) refers to uart.o(i.uart_check_tx_free) for uart_check_tx_free
+    sleep.o(i.usr_sleep) refers to sleep.o(.data) for .data
+    sleep.o(i.wakeup_32k_xtal_switch_clk) refers to sleep.o(i.syscon_SetIvrefX32WithMask) for syscon_SetIvrefX32WithMask
+    sleep.o(i.wakeup_32k_xtal_switch_clk) refers to sleep.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    sleep.o(i.wakeup_32k_xtal_switch_clk) refers to sleep.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    sleep.o(i.wakeup_by_gpio) refers to sleep.o(i.syscon_SetPGCR2WithMask) for syscon_SetPGCR2WithMask
+    sleep.o(i.wakeup_by_gpio) refers to gpio.o(i.gpio_wakeup_config) for gpio_wakeup_config
+    sleep.o(i.wakeup_by_gpio) refers to gpio.o(i.gpio_enable_interrupt) for gpio_enable_interrupt
+    sleep.o(i.wakeup_by_gpio) refers to sleep.o(.data) for .data
+    sleep.o(i.wakeup_by_sleep_timer) refers to sleep.o(i.syscon_SetPGCR2WithMask) for syscon_SetPGCR2WithMask
+    sleep.o(i.wakeup_by_sleep_timer) refers to sleep.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    sleep.o(i.wakeup_by_sleep_timer) refers to sleep.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    sleep.o(i.wakeup_by_sleep_timer) refers to sleep.o(i.syscon_SetPGCR0WithMask) for syscon_SetPGCR0WithMask
+    sleep.o(i.wakeup_by_sleep_timer) refers to sleep.o(.data) for .data
+    syscon.o(i.syscon_get_ahb_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_get_ahb_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_get_apb_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_get_apb_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_ahb_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_set_ahb_clk) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_ahb_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_apb_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_set_apb_clk) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_apb_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_ble_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_set_ble_clk) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_ble_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_sysclk_src) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_sysclk_src) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_timer_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_set_timer_clk) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_timer_clk) refers to syscon.o(.data) for .data
+    syscon.o(i.syscon_set_usart_clk) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(i.syscon_set_usart_clk) refers to syscon.o(i.syscon_SetCMDCRWithMask) for syscon_SetCMDCRWithMask
+    syscon.o(i.syscon_set_usart_clk) refers to syscon.o(.data) for .data
+    adc.o(i.ADC_IRQHandler) refers to adc.o(i.adc_adc_SetADC0WithMask) for adc_adc_SetADC0WithMask
+    adc.o(i.ADC_IRQHandler) refers to adc.o(i.adc_clean_fifo) for adc_clean_fifo
+    adc.o(i.ADC_IRQHandler) refers to adc.o(.data) for .data
+    adc.o(i.ADC_IRQHandler) refers to adc.o(.bss) for .bss
+    adc.o(i.ADC_IRQHandler) refers to sleep.o(.data) for sleep_env
+    adc.o(i.ADC_RESULT_mV) refers to math.o(.text) for __aeabi_lmul
+    adc.o(i.ADC_RESULT_mV) refers to adc.o(.data) for .data
+    adc.o(i.__adc_calibrate) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.__adc_calibrate) refers to adc.o(i.adc_read) for adc_read
+    adc.o(i.__adc_calibrate) refers to adc.o(.data) for .data
+    adc.o(i.__adc_calibrate) refers to adc.o(i.adc_offset_get_cb) for adc_offset_get_cb
+    adc.o(i.adc_buf_gain_set) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.adc_buf_in_set) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.adc_buf_in_set) refers to adc.o(.data) for .data
+    adc.o(i.adc_compare_init) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.adc_compare_init) refers to adc.o(.bss) for .bss
+    adc.o(i.adc_decimation_enable) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.adc_init) refers to adc.o(i.syscon_SetADCCRWithMask) for syscon_SetADCCRWithMask
+    adc.o(i.adc_init) refers to adc.o(i.adc_adc_SetADC1WithMask) for adc_adc_SetADC1WithMask
+    adc.o(i.adc_init) refers to adc.o(i.__adc_calibrate) for __adc_calibrate
+    adc.o(i.adc_init) refers to adc.o(.bss) for .bss
+    adc.o(i.adc_offset_get_cb) refers to adc.o(.data) for .data
+    adc.o(i.adc_read) refers to adc.o(i.adc_adc_SetADC0WithMask) for adc_adc_SetADC0WithMask
+    adc.o(i.adc_read) refers to adc.o(.bss) for .bss
+    adc.o(i.adc_read) refers to adc.o(.data) for .data
+    adc.o(i.adc_read) refers to sleep.o(.data) for sleep_env
+    analog.o(i.COMPARATOR0_IRQHandler) refers to analog.o(.data) for .data
+    analog.o(i.COMPARATOR1_IRQHandler) refers to analog.o(.data) for .data
+    analog.o(i.battery_monitor_enable) refers to analog.o(i.syscon_SetAnalogCRWithMask) for syscon_SetAnalogCRWithMask
+    analog.o(i.brown_out_enable) refers to analog.o(i.syscon_SetAnalogCRWithMask) for syscon_SetAnalogCRWithMask
+    analog.o(i.comparator_enable) refers to analog.o(i.syscon_SetAnalogCRWithMask) for syscon_SetAnalogCRWithMask
+    analog.o(i.comparator_init) refers to analog.o(i.syscon_SetAnalogCRWithMask) for syscon_SetAnalogCRWithMask
+    analog.o(i.comparator_init) refers to analog.o(.data) for .data
+    analog.o(i.temp_sensor_enable) refers to analog.o(i.syscon_SetAnalogCRWithMask) for syscon_SetAnalogCRWithMask
+    analog.o(i.temp_sensor_enable) refers to analog.o(.data) for .data
+    wdt.o(i.WDT_IRQHandler) refers to wdt.o(i.wdt_irq_clear) for wdt_irq_clear
+    wdt.o(i.WDT_IRQHandler) refers to wdt.o(.data) for .data
+    wdt.o(i.wdt_init) refers to wdt.o(.data) for .data
+    timer.o(i.TIMER0_IRQHandler) refers to timer.o(.data) for .data
+    timer.o(i.TIMER1_IRQHandler) refers to timer.o(.data) for .data
+    timer.o(i.TIMER2_IRQHandler) refers to timer.o(.data) for .data
+    timer.o(i.TIMER3_IRQHandler) refers to timer.o(.data) for .data
+    timer.o(i.timer_delay) refers to sleep.o(.data) for sleep_env
+    timer.o(i.timer_init) refers to timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    timer.o(i.timer_init) refers to timer.o(.data) for .data
+    led.o(i.led_get) refers to app_gap_task.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    led.o(i.led_get) refers to gpio.o(i.gpio_read_pin) for gpio_read_pin
+    led.o(i.led_init) refers to gpio.o(i.gpio_set_direction_field) for gpio_set_direction_field
+    led.o(i.led_init) refers to led.o(i.led_set) for led_set
+    led.o(i.led_matrix) refers to gpio.o(i.gpio_write_pin_field) for gpio_write_pin_field
+    led.o(i.led_set) refers to app_gap_task.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    led.o(i.led_set) refers to gpio.o(i.gpio_write_pin) for gpio_write_pin
+    button.o(i.button_init) refers to gpio.o(i.gpio_wakeup_config) for gpio_wakeup_config
+    button.o(i.button_init) refers to gpio.o(i.gpio_enable_interrupt) for gpio_enable_interrupt
+    button.o(i.check_button_state) refers to gpio.o(i.gpio_read_pin_field) for gpio_read_pin_field
+    retarget.o(i._ttywrch) refers to uart.o(i.UartPutc) for UartPutc
+    retarget.o(i.fgetc) refers to uart.o(i.UartGetc) for UartGetc
+    retarget.o(i.fgetc) refers to uart.o(i.UartPutc) for UartPutc
+    retarget.o(i.fputc) refers to uart.o(i.UartPutc) for UartPutc
+    lib.o(i.BLE_IRQHandler) refers to math.o(.text) for __rd_ble_reg
+    lib.o(i.BLE_IRQHandler) refers to lib.o(i.default_exit_sleep_cb) for default_exit_sleep_cb
+    lib.o(i.__nvds_put) refers to memcmp.o(.text) for memcmp
+    lib.o(i.__nvds_put) refers to lib.o(i.nvds_write) for nvds_write
+    lib.o(i.__nvds_put) refers to lib.o(i.nvds_purge) for nvds_purge
+    lib.o(i.atts_svc_create_db_ext) refers to memcpya.o(.text) for __aeabi_memcpy
+    lib.o(i.atts_svc_create_db_ext) refers to llsshr.o(.text) for __aeabi_lasr
+    lib.o(i.ble_ext_wakeup_allow) refers to lib.o(i.ble_hw_sleep) for ble_hw_sleep
+    lib.o(i.ble_ext_wakeup_allow) refers to lib.o(.data) for .data
+    lib.o(i.ble_init) refers to memcpya.o(.text) for __aeabi_memcpy4
+    lib.o(i.ble_init) refers to lib.o(i.task_gatt_desc_register) for task_gatt_desc_register
+    lib.o(i.ble_init) refers to math.o(.text) for __wr_ble_reg
+    lib.o(i.ble_init) refers to lib.o(i.config_work_mode) for config_work_mode
+    lib.o(i.ble_init) refers to lib.o(.constdata) for .constdata
+    lib.o(i.ble_init) refers to lib.o(.bss) for .bss
+    lib.o(i.ble_init) refers to lib.o(i.l2cc_data_packet_ind_handler_patch) for l2cc_data_packet_ind_handler_patch
+    lib.o(i.ble_init) refers to lib.o(i.gap_discon_ind_handler_patch) for gap_discon_ind_handler_patch
+    lib.o(i.ble_init) refers to lib.o(.data) for .data
+    lib.o(i.ble_sleep) refers to lib.o(i.fw_ble_sleep) for fw_ble_sleep
+    lib.o(i.ble_sleep) refers to lib.o(.data) for .data
+    lib.o(i.check_ble_wakeup) refers to math.o(.text) for __rd_ble_reg
+    lib.o(i.config_work_mode) refers to lib.o(.data) for .data
+    lib.o(i.dc_dc_enable) refers to lib.o(i.syscon_SetIvrefX32WithMask) for syscon_SetIvrefX32WithMask
+    lib.o(i.dc_dc_enable) refers to lib.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    lib.o(i.dc_dc_enable) refers to lib.o(.data) for .data
+    lib.o(i.flash_on) refers to lib.o(i.delay) for delay
+    lib.o(i.fw_ble_sleep) refers to math.o(.text) for __rd_ble_reg
+    lib.o(i.fw_ble_sleep) refers to lib.o(i.rwble_slot_2_lpcycles) for rwble_slot_2_lpcycles
+    lib.o(i.fw_ble_sleep) refers to lib.o(.data) for .data
+    lib.o(i.gatt_write_char_req_handler_patch) refers to memcpya.o(.text) for __aeabi_memcpy
+    lib.o(i.ke_schedule) refers to lib.o(i.ke_time) for ke_time
+    lib.o(i.ke_schedule) refers to lib.o(.data) for .data
+    lib.o(i.ke_time) refers to math.o(.text) for __wr_ble_reg
+    lib.o(i.ke_timer_empty) refers to lib.o(.data) for .data
+    lib.o(i.l2cc_data_packet_ind_handler_patch) refers to lib.o(i.co_buf_rx_get) for co_buf_rx_get
+    lib.o(i.l2cc_data_packet_ind_handler_patch) refers to memcpya.o(.text) for __aeabi_memcpy
+    lib.o(i.lld_sleep_lpcycles_2_us) refers to math.o(.text) for __aeabi_lmul
+    lib.o(i.lld_sleep_lpcycles_2_us) refers to lib.o(.data) for .data
+    lib.o(i.nvds_copy) refers to lib.o(.bss) for .bss
+    lib.o(i.nvds_erase) refers to lib.o(i.flash_on) for flash_on
+    lib.o(i.nvds_erase) refers to lib.o(i.nvds_copy) for nvds_copy
+    lib.o(i.nvds_erase) refers to lib.o(i.nvds_write) for nvds_write
+    lib.o(i.nvds_purge) refers to lib.o(i.nvds_erase) for nvds_erase
+    lib.o(i.nvds_purge) refers to lib.o(i.nvds_write) for nvds_write
+    lib.o(i.nvds_restore_backup) refers to lib.o(i.flash_on) for flash_on
+    lib.o(i.nvds_restore_backup) refers to memcmp.o(.text) for memcmp
+    lib.o(i.nvds_restore_backup) refers to lib.o(i.nvds_copy) for nvds_copy
+    lib.o(i.nvds_restore_backup) refers to lib.o(.bss) for .bss
+    lib.o(i.plf_init) refers to lib.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    lib.o(i.plf_init) refers to lib.o(i.syscon_SetIvrefX32WithMask) for syscon_SetIvrefX32WithMask
+    lib.o(i.plf_init) refers to lib.o(i.dp_dp_SetRegWithMask) for dp_dp_SetRegWithMask
+    lib.o(i.plf_init) refers to lib.o(i.flash_on) for flash_on
+    lib.o(i.plf_init) refers to lib.o(i.nvds_restore_backup) for nvds_restore_backup
+    lib.o(i.plf_init) refers to lib.o(i.powerup_calibration) for powerup_calibration
+    lib.o(i.plf_init) refers to rand.o(.text) for srand
+    lib.o(i.plf_init) refers to lib.o(.data) for .data
+    lib.o(i.plf_init) refers to lib.o(i.nvds_write) for nvds_write
+    lib.o(i.plf_init) refers to lib.o(i.nvds_erase) for nvds_erase
+    lib.o(i.plf_init) refers to lib.o(i.foo1) for foo1
+    lib.o(i.plf_init) refers to lib.o(i.lld_sleep_lpcycles_2_us) for lld_sleep_lpcycles_2_us
+    lib.o(i.plf_init) refers to lib.o(i.default_enter_sleep_cb) for default_enter_sleep_cb
+    lib.o(i.plf_init) refers to lib.o(i.default_exit_sleep_cb) for default_exit_sleep_cb
+    lib.o(i.plf_init) refers to lib.o(i.plf_reset_cb) for plf_reset_cb
+    lib.o(i.powerup_calibration) refers to lib.o(i.cal_cal_SetCAL0WithMask) for cal_cal_SetCAL0WithMask
+    lib.o(i.powerup_calibration) refers to lib.o(i.cal_cal_SetCAL1WithMask) for cal_cal_SetCAL1WithMask
+    lib.o(i.powerup_calibration) refers to lib.o(i.dp_dp_SetRegWithMask) for dp_dp_SetRegWithMask
+    lib.o(i.powerup_calibration) refers to lib.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    lib.o(i.powerup_calibration) refers to lib.o(i.delay) for delay
+    lib.o(i.powerup_calibration) refers to qnrf.o(i.rf_enable_sw_set_freq) for rf_enable_sw_set_freq
+    lib.o(i.powerup_calibration) refers to qnrf.o(i.rf_enable) for rf_enable
+    lib.o(i.reg_eaci_tx_done) refers to lib.o(.data) for .data
+    lib.o(i.restore_ble_setting) refers to lib.o(i.dp_dp_SetRegWithMask) for dp_dp_SetRegWithMask
+    lib.o(i.rwble_slot_2_lpcycles) refers to math.o(.text) for __aeabi_uldivmod
+    lib.o(i.sleep_post_process) refers to lib.o(i.syscon_SetPGCR1WithMask) for syscon_SetPGCR1WithMask
+    lib.o(i.sleep_post_process) refers to lib.o(i.dp_dp_SetRegWithMask) for dp_dp_SetRegWithMask
+    lib.o(i.task_gatt_desc_register) refers to memcpya.o(.text) for __aeabi_memcpy4
+    lib.o(i.task_gatt_desc_register) refers to lib.o(.constdata) for .constdata
+    lib.o(i.task_gatt_desc_register) refers to lib.o(.bss) for .bss
+    lib.o(i.task_gatt_desc_register) refers to lib.o(i.gatt_read_char_req_handler_patch) for gatt_read_char_req_handler_patch
+    lib.o(i.task_gatt_desc_register) refers to lib.o(i.gatt_write_char_req_handler_patch) for gatt_write_char_req_handler_patch
+    lib.o(i.task_gatt_desc_register) refers to lib.o(i.atts_req_error_ind_handler_patch) for atts_req_error_ind_handler_patch
+    lib.o(i.task_gatt_desc_register) refers to lib.o(i.l2cc_data_send_rsp_handler_patch) for l2cc_data_send_rsp_handler_patch
+    lib.o(i.task_gatt_desc_register) refers to lib.o(.data) for .data
+    lib.o(.constdata) refers to lib.o(.bss) for gatt_idle_new
+    lib.o(.data) refers to lib.o(.bss) for l2cm_default_state_new
+    qnrf.o(i.rf_enable) refers to qnrf.o(i.dp_dp_SetRegWithMask) for dp_dp_SetRegWithMask
+    qnrf.o(i.rf_set_freq) refers to qnrf.o(.constdata) for .constdata
+    qnrf.o(i.rf_tx_power_level_get) refers to qnrf.o(.constdata) for .constdata
+    qnrf.o(i.rf_tx_power_level_set) refers to app_gap_task.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    qnrf.o(i.rf_tx_power_level_set) refers to qnrf.o(.constdata) for .constdata
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    rand.o(.text) refers to rand.o(.data) for .data
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(i.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to retarget.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to retarget.o(i.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to retarget.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to retarget.o(i.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to retarget.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to retarget.o(i.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to retarget.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to retarget.o(i.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to retarget.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to retarget.o(i.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to retarget.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to math.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to retarget.o(i.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to retarget.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to math.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to retarget.o(i.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to retarget.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to retarget.o(i.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to retarget.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to math.o(.text) for __aeabi_uldivmod
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to retarget.o(i.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to retarget.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to math.o(.text) for __aeabi_uldivmod
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0printf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to retarget.o(i.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to retarget.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to math.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to math.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atoi.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    atoi.o(.text) refers to strtol.o(.text) for strtol
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to app_main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to app_main.o(i.main) for main
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    strtol.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    strtol.o(.text) refers to _strtoul.o(.text) for _strtoul
+    strtol.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    ctype_o.o(.text) refers to ctype_o.o(.constdata) for .constdata
+    ctype_o.o(.constdata) refers to ctype_o.o(.constdata) for __ctype_table
+    isalnum_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isalpha_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isblank_o.o(.text) refers to ctype_o.o(.constdata) for __ctype_table
+    iscntrl_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isgraph_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    islower_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isprint_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    ispunct_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isspace_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isupper_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isxdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    _strtoul.o(.text) refers to _chval.o(.text) for _chval
+    _strtoul.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing app_main.o(.rev16_text), (4 bytes).
+    Removing app_main.o(.revsh_text), (4 bytes).
+    Removing app_main.o(i.assert_param), (8 bytes).
+    Removing app_main.o(i.assert_warn), (52 bytes).
+    Removing system.o(.rev16_text), (4 bytes).
+    Removing system.o(.revsh_text), (4 bytes).
+    Removing usr_design.o(.rev16_text), (4 bytes).
+    Removing usr_design.o(.revsh_text), (4 bytes).
+    Removing app_util.o(.rev16_text), (4 bytes).
+    Removing app_util.o(.revsh_text), (4 bytes).
+    Removing app_util.o(i.app_check_update_conn_param), (4 bytes).
+    Removing app_util.o(i.app_get_conhdl_by_bdaddr), (152 bytes).
+    Removing app_env.o(.rev16_text), (4 bytes).
+    Removing app_env.o(.revsh_text), (4 bytes).
+    Removing app_printf.o(.rev16_text), (4 bytes).
+    Removing app_printf.o(.revsh_text), (4 bytes).
+    Removing app_printf.o(i.eaddr), (128 bytes).
+    Removing app_printf.o(i.iaddr), (188 bytes).
+    Removing app_printf.o(i.number), (324 bytes).
+    Removing app_printf.o(i.qsprintf), (600 bytes).
+    Removing app_printf.o(i.qtrace), (128 bytes).
+    Removing app_printf.o(i.skip_atoi), (32 bytes).
+    Removing app_printf.o(.bss), (128 bytes).
+    Removing app_printf.o(.conststring), (77 bytes).
+    Removing app_printf.o(.data), (8 bytes).
+    Removing app_sys.o(.rev16_text), (4 bytes).
+    Removing app_sys.o(.revsh_text), (4 bytes).
+    Removing app_task.o(.rev16_text), (4 bytes).
+    Removing app_task.o(.revsh_text), (4 bytes).
+    Removing app_gap.o(.rev16_text), (4 bytes).
+    Removing app_gap.o(.revsh_text), (4 bytes).
+    Removing app_gap.o(i.app_gap_bond_req), (84 bytes).
+    Removing app_gap.o(i.app_gap_discon_req), (40 bytes).
+    Removing app_gap.o(i.app_gap_reset_req), (20 bytes).
+    Removing app_gap.o(i.app_gap_security_req), (128 bytes).
+    Removing app_gap.o(i.app_gap_set_devname_req), (52 bytes).
+    Removing app_gap.o(i.app_gap_set_privacy_req), (44 bytes).
+    Removing app_gap.o(i.app_gap_set_random_addr_req), (44 bytes).
+    Removing app_gap.o(i.app_gap_unpair_req), (56 bytes).
+    Removing app_gap_task.o(.rev16_text), (4 bytes).
+    Removing app_gap_task.o(.revsh_text), (4 bytes).
+    Removing app_gap_task.o(i.app_correct_rssi), (76 bytes).
+    Removing app_gap_task.o(i.app_device_setup), (10 bytes).
+    Removing app_gatt.o(.rev16_text), (4 bytes).
+    Removing app_gatt.o(.revsh_text), (4 bytes).
+    Removing app_gatt_task.o(.rev16_text), (4 bytes).
+    Removing app_gatt_task.o(.revsh_text), (4 bytes).
+    Removing app_smp.o(.rev16_text), (4 bytes).
+    Removing app_smp.o(.revsh_text), (4 bytes).
+    Removing app_smp.o(i.app_smpc_start_enc_req), (72 bytes).
+    Removing app_smp_task.o(.rev16_text), (4 bytes).
+    Removing app_smp_task.o(.revsh_text), (4 bytes).
+    Removing app_bass_task.o(.rev16_text), (4 bytes).
+    Removing app_bass_task.o(.revsh_text), (4 bytes).
+    Removing app_bass.o(.rev16_text), (4 bytes).
+    Removing app_bass.o(.revsh_text), (4 bytes).
+    Removing prf_utils.o(.rev16_text), (4 bytes).
+    Removing prf_utils.o(.revsh_text), (4 bytes).
+    Removing prf_utils.o(i.prf_pack_date_time), (32 bytes).
+    Removing prf_utils.o(i.prf_unpack_date_time), (34 bytes).
+    Removing bass_task.o(.rev16_text), (4 bytes).
+    Removing bass_task.o(.revsh_text), (4 bytes).
+    Removing bass.o(.rev16_text), (4 bytes).
+    Removing bass.o(.revsh_text), (4 bytes).
+    Removing uart.o(.rev16_text), (4 bytes).
+    Removing uart.o(.revsh_text), (4 bytes).
+    Removing uart.o(i.UartGetc), (20 bytes).
+    Removing uart.o(i.uart_dump_register), (48 bytes).
+    Removing uart.o(i.uart_finish_transfers), (8 bytes).
+    Removing uart.o(i.uart_flow_off), (216 bytes).
+    Removing uart.o(i.uart_flow_on), (60 bytes).
+    Removing uart.o(i.uart_printf), (20 bytes).
+    Removing uart.o(i.uart_read), (96 bytes).
+    Removing uart.o(i.uart_write), (96 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.gpio_disable_interrupt), (10 bytes).
+    Removing gpio.o(i.gpio_pull_set), (104 bytes).
+    Removing gpio.o(i.gpio_set_interrupt), (40 bytes).
+    Removing gpio.o(i.gpio_toggle_pin), (14 bytes).
+    Removing gpio.o(i.gpio_write_pin_field), (18 bytes).
+    Removing sleep.o(.rev16_text), (4 bytes).
+    Removing sleep.o(.revsh_text), (4 bytes).
+    Removing sleep.o(i.enter_low_power_mode), (100 bytes).
+    Removing sleep.o(i.restore_from_low_power_mode), (76 bytes).
+    Removing sleep.o(i.wakeup_by_gpio), (64 bytes).
+    Removing syscon.o(.rev16_text), (4 bytes).
+    Removing syscon.o(.revsh_text), (4 bytes).
+    Removing syscon.o(i.syscon_enable_transceiver), (44 bytes).
+    Removing syscon.o(i.syscon_get_ahb_clk), (36 bytes).
+    Removing syscon.o(i.syscon_get_apb_clk), (36 bytes).
+    Removing syscon.o(i.syscon_get_reset_cause), (82 bytes).
+    Removing adc.o(.rev16_text), (4 bytes).
+    Removing adc.o(.revsh_text), (4 bytes).
+    Removing adc.o(i.adc_buf_gain_set), (20 bytes).
+    Removing adc.o(i.adc_buf_in_set), (44 bytes).
+    Removing adc.o(i.adc_compare_init), (48 bytes).
+    Removing analog.o(.rev16_text), (4 bytes).
+    Removing analog.o(.revsh_text), (4 bytes).
+    Removing analog.o(i.brown_out_enable), (16 bytes).
+    Removing analog.o(i.comparator_enable), (76 bytes).
+    Removing analog.o(i.comparator_init), (100 bytes).
+    Removing analog.o(i.temp_sensor_enable), (84 bytes).
+    Removing wdt.o(.rev16_text), (4 bytes).
+    Removing wdt.o(.revsh_text), (4 bytes).
+    Removing wdt.o(i.wdt_init), (84 bytes).
+    Removing wdt.o(i.wdt_lock), (12 bytes).
+    Removing wdt.o(i.wdt_set), (28 bytes).
+    Removing wdt.o(i.wdt_unlock), (16 bytes).
+    Removing timer.o(.rev16_text), (4 bytes).
+    Removing timer.o(.revsh_text), (4 bytes).
+    Removing timer.o(i.NVIC_EnableIRQ), (20 bytes).
+    Removing timer.o(i.timer_capture_config), (124 bytes).
+    Removing timer.o(i.timer_config), (72 bytes).
+    Removing timer.o(i.timer_delay), (112 bytes).
+    Removing timer.o(i.timer_init), (144 bytes).
+    Removing timer.o(i.timer_pwm_config), (80 bytes).
+    Removing rtc.o(.rev16_text), (4 bytes).
+    Removing rtc.o(.revsh_text), (4 bytes).
+    Removing led.o(.rev16_text), (4 bytes).
+    Removing led.o(.revsh_text), (4 bytes).
+    Removing led.o(i.led_matrix), (46 bytes).
+    Removing button.o(.rev16_text), (4 bytes).
+    Removing button.o(.revsh_text), (4 bytes).
+    Removing button.o(i.check_button_state), (20 bytes).
+    Removing retarget.o(i._sys_exit), (2 bytes).
+    Removing retarget.o(i._ttywrch), (10 bytes).
+    Removing retarget.o(i.ferror), (6 bytes).
+    Removing retarget.o(i.fgetc), (12 bytes).
+    Removing retarget.o(.data), (4 bytes).
+    Removing lib.o(.rev16_text), (4 bytes).
+    Removing lib.o(.revsh_text), (4 bytes).
+    Removing lib.o(i.__nvds_put), (356 bytes).
+    Removing lib.o(i.atts_svc_create_db_ext), (332 bytes).
+    Removing lib.o(i.nvds_purge), (144 bytes).
+    Removing lib.o(i.reg_ble_sleep_cb), (12 bytes).
+    Removing lib.o(i.reg_eaci_tx_done), (20 bytes).
+    Removing lib.o(i.set_ble_program_latency), (36 bytes).
+    Removing qnrf.o(.rev16_text), (4 bytes).
+    Removing qnrf.o(.revsh_text), (4 bytes).
+    Removing qnrf.o(i.rf_set_freq), (108 bytes).
+    Removing qnrf.o(i.rf_tx_power_level_get), (76 bytes).
+    Removing qnrf.o(i.rf_tx_power_level_set), (152 bytes).
+    Removing qnrf.o(.constdata), (337 bytes).
+    Removing dadd.o(.text), (356 bytes).
+    Removing dmul.o(.text), (208 bytes).
+    Removing dflti.o(.text), (40 bytes).
+    Removing dfixi.o(.text), (72 bytes).
+    Removing depilogue.o(.text), (190 bytes).
+    Removing ddiv.o(.text), (240 bytes).
+    Removing dfixul.o(.text), (64 bytes).
+    Removing cdrcmple.o(.text), (40 bytes).
+    Removing depilogue.o(i.__ARM_clz), (46 bytes).
+
+154 unused section(s) (total 7974 bytes) removed from the image.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_ROM1 (Base: 0x10000000, Size: 0x00004d10, Max: 0x0000cdb0, ABSOLUTE)
+
+    Execution Region APP_CODE (Base: 0x10000000, Size: 0x000058f0, Max: 0x0000cdb0, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x000000c0   Data   RO            3    RESET               startup.o
+    0x100000c0   0x00000000   Code   RO         2388  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x100000c0   0x00000004   Code   RO         2681    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x100000c4   0x00000004   Code   RO         2684    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x100000c8   0x00000000   Code   RO         2686    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x100000c8   0x00000000   Code   RO         2688    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x100000c8   0x00000008   Code   RO         2689    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x100000d0   0x00000000   Code   RO         2691    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x100000d0   0x00000000   Code   RO         2693    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x100000d0   0x00000004   Code   RO         2682    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x100000d4   0x00000030   Code   RO            4    .text               startup.o
+    0x10000104   0x000001ae   Code   RO         2369    .text               qn9020b2_lib_peripheral.lib(math.o)
+    0x100002b2   0x0000002c   Code   RO         2391    .text               mc_p.l(uidiv.o)
+    0x100002de   0x00000028   Code   RO         2393    .text               mc_p.l(idiv.o)
+    0x10000306   0x00000002   PAD
+    0x10000308   0x00000024   Code   RO         2397    .text               mc_p.l(rand.o)
+    0x1000032c   0x00000024   Code   RO         2400    .text               mc_p.l(memcpya.o)
+    0x10000350   0x00000024   Code   RO         2402    .text               mc_p.l(memseta.o)
+    0x10000374   0x0000001a   Code   RO         2404    .text               mc_p.l(memcmp.o)
+    0x1000038e   0x00000012   Code   RO         2406    .text               mc_p.l(strcpy.o)
+    0x100003a0   0x0000001a   Code   RO         2671    .text               mc_p.l(atoi.o)
+    0x100003ba   0x00000002   PAD
+    0x100003bc   0x00000070   Code   RO         2706    .text               mc_p.l(strtol.o)
+    0x1000042c   0x00000024   Code   RO         2719    .text               mc_p.l(init.o)
+    0x10000450   0x00000008   Code   RO         2721    .text               mc_p.l(ctype_o.o)
+    0x10000458   0x000000a6   Code   RO         2749    .text               mc_p.l(_strtoul.o)
+    0x100004fe   0x0000001e   Code   RO         2751    .text               mc_p.l(_chval.o)
+    0x1000051c   0x000000d4   Code   RO         1826    i.ADC_IRQHandler    adc.o
+    0x100005f0   0x00000030   Code   RO         1827    i.ADC_RESULT_mV     adc.o
+    0x10000620   0x000000ac   Code   RO         2268    i.BLE_IRQHandler    qn9020b2_lib_peripheral.lib(lib.o)
+    0x100006cc   0x00000010   Code   RO         1928    i.COMPARATOR0_IRQHandler  analog.o
+    0x100006dc   0x00000010   Code   RO         1929    i.COMPARATOR1_IRQHandler  analog.o
+    0x100006ec   0x00000028   Code   RO         1503    i.GPIO_IRQHandler   gpio.o
+    0x10000714   0x00000014   Code   RO         1614    i.OSC_EN_IRQHandler  sleep.o
+    0x10000728   0x00000114   Code   RO          270    i.SystemInit        system.o
+    0x1000083c   0x00000034   Code   RO         2059    i.TIMER0_IRQHandler  timer.o
+    0x10000870   0x00000034   Code   RO         2060    i.TIMER1_IRQHandler  timer.o
+    0x100008a4   0x00000034   Code   RO         2061    i.TIMER2_IRQHandler  timer.o
+    0x100008d8   0x00000034   Code   RO         2062    i.TIMER3_IRQHandler  timer.o
+    0x1000090c   0x00000064   Code   RO         1389    i.UART0_RX_IRQHandler  uart.o
+    0x10000970   0x0000003c   Code   RO         1390    i.UART0_TX_IRQHandler  uart.o
+    0x100009ac   0x00000018   Code   RO         1392    i.UartPutc          uart.o
+    0x100009c4   0x00000018   Code   RO         2001    i.WDT_IRQHandler    wdt.o
+    0x100009dc   0x00000020   Code   RO         2617    i.__0printf$8       mc_p.l(printf8.o)
+    0x100009fc   0x0000001a   Code   RO          985    i.__ARM_common_switch8  app_gap_task.o
+    0x10000a16   0x00000002   PAD
+    0x10000a18   0x000000c0   Code   RO         1828    i.__adc_calibrate   adc.o
+    0x10000ad8   0x00000008   Code   RO         2699    i.__aeabi_errno_addr  mc_p.l(errno.o)
+    0x10000ae0   0x00000428   Code   RO         2624    i._printf_core      mc_p.l(printf8.o)
+    0x10000f08   0x00000020   Code   RO         2625    i._printf_post_padding  mc_p.l(printf8.o)
+    0x10000f28   0x0000002c   Code   RO         2626    i._printf_pre_padding  mc_p.l(printf8.o)
+    0x10000f54   0x0000000c   Code   RO         1829    i.adc_adc_SetADC0WithMask  adc.o
+    0x10000f60   0x0000000c   Code   RO         1830    i.adc_adc_SetADC1WithMask  adc.o
+    0x10000f6c   0x00000014   Code   RO         1833    i.adc_clean_fifo    adc.o
+    0x10000f80   0x0000001c   Code   RO         1835    i.adc_decimation_enable  adc.o
+    0x10000f9c   0x00000104   Code   RO         1836    i.adc_init          adc.o
+    0x100010a0   0x0000000c   Code   RO         1837    i.adc_offset_get_cb  adc.o
+    0x100010ac   0x00000098   Code   RO         1838    i.adc_read          adc.o
+    0x10001144   0x0000000c   Code   RO          352    i.adc_sample_complete_callback  usr_design.o
+    0x10001150   0x00000040   Code   RO          716    i.app_32k_xtal_wakeup_timer  app_task.o
+    0x10001190   0x00000024   Code   RO          466    i.app_add_bonded_dev  app_util.o
+    0x100011b4   0x0000002c   Code   RO         1134    i.app_bass_batt_level_ntf_cfg_ind_handler  app_bass_task.o
+    0x100011e0   0x00000060   Code   RO          353    i.app_bass_batt_level_timer_handler  usr_design.o
+    0x10001240   0x00000018   Code   RO         1135    i.app_bass_batt_level_upd_cfm_handler  app_bass_task.o
+    0x10001258   0x00000034   Code   RO         1188    i.app_bass_batt_level_upd_req  app_bass.o
+    0x1000128c   0x00000034   Code   RO         1189    i.app_bass_create_db  app_bass.o
+    0x100012c0   0x00000014   Code   RO         1136    i.app_bass_create_db_cfm_handler  app_bass_task.o
+    0x100012d4   0x00000020   Code   RO         1137    i.app_bass_disable_ind_handler  app_bass_task.o
+    0x100012f4   0x00000084   Code   RO         1190    i.app_bass_enable_req  app_bass.o
+    0x10001378   0x00000028   Code   RO         1138    i.app_bass_error_ind_handler  app_bass_task.o
+    0x100013a0   0x00000070   Code   RO          609    i.app_bass_init     app_env.o
+    0x10001410   0x000000a8   Code   RO          354    i.app_button_timer_handler  usr_design.o
+    0x100014b8   0x00000010   Code   RO          468    i.app_clear_local_service_flag  app_util.o
+    0x100014c8   0x00000014   Code   RO          469    i.app_create_server_service_DB  app_util.o
+    0x100014dc   0x00000054   Code   RO          470    i.app_enable_server_service  app_util.o
+    0x10001530   0x000000d8   Code   RO          355    i.app_event_adc_sample_cmp_handler  usr_design.o
+    0x10001608   0x00000034   Code   RO          356    i.app_event_button1_press_handler  usr_design.o
+    0x1000163c   0x0000003c   Code   RO          471    i.app_find_bonded_dev  app_util.o
+    0x10001678   0x0000004c   Code   RO          357    i.app_gap_adv_intv_update_timer_handler  usr_design.o
+    0x100016c4   0x00000048   Code   RO          864    i.app_gap_adv_req_cmp_evt_handler  app_gap_task.o
+    0x1000170c   0x00000088   Code   RO          752    i.app_gap_adv_start_req  app_gap.o
+    0x10001794   0x00000024   Code   RO          753    i.app_gap_adv_stop_req  app_gap.o
+    0x100017b8   0x00000078   Code   RO          865    i.app_gap_bond_req_cmp_ind_handler  app_gap_task.o
+    0x10001830   0x0000005c   Code   RO          866    i.app_gap_bond_req_ind_handler  app_gap_task.o
+    0x1000188c   0x0000003c   Code   RO          755    i.app_gap_bond_resp  app_gap.o
+    0x100018c8   0x0000004c   Code   RO          867    i.app_gap_change_param_req_cmp_handler  app_gap_task.o
+    0x10001914   0x000000b4   Code   RO          868    i.app_gap_discon_cmp_evt_handler  app_gap_task.o
+    0x100019c8   0x000000a4   Code   RO          869    i.app_gap_le_create_conn_req_cmp_evt_handler  app_gap_task.o
+    0x10001a6c   0x00000034   Code   RO          757    i.app_gap_param_update_req  app_gap.o
+    0x10001aa0   0x00000058   Code   RO          870    i.app_gap_param_update_resp_handler  app_gap_task.o
+    0x10001af8   0x00000014   Code   RO          758    i.app_gap_read_bdaddr_req  app_gap.o
+    0x10001b0c   0x00000054   Code   RO          871    i.app_gap_read_bdaddr_req_cmp_evt_handler  app_gap_task.o
+    0x10001b60   0x00000014   Code   RO          759    i.app_gap_read_ver_req  app_gap.o
+    0x10001b74   0x00000024   Code   RO          872    i.app_gap_read_ver_req_cmp_evt_handler  app_gap_task.o
+    0x10001b98   0x00000018   Code   RO          873    i.app_gap_ready_evt_handler  app_gap_task.o
+    0x10001bb0   0x0000000a   Code   RO          874    i.app_gap_reset_req_cmp_handler  app_gap_task.o
+    0x10001bba   0x00000002   PAD
+    0x10001bbc   0x00000024   Code   RO          762    i.app_gap_set_bondable_mode_req  app_gap.o
+    0x10001be0   0x00000034   Code   RO          875    i.app_gap_set_devname_req_cmp_evt_handler  app_gap_task.o
+    0x10001c14   0x00000094   Code   RO          876    i.app_gap_set_mode_req_cmp_evt_handler  app_gap_task.o
+    0x10001ca8   0x00000048   Code   RO          877    i.app_gap_set_privacy_req_cmp_handler  app_gap_task.o
+    0x10001cf0   0x00000030   Code   RO          878    i.app_gap_set_random_add_req_cmp_handler  app_gap_task.o
+    0x10001d20   0x00000028   Code   RO          766    i.app_gap_set_sec_req  app_gap.o
+    0x10001d48   0x00000024   Code   RO          879    i.app_gap_set_sec_req_cmp_evt_handler  app_gap_task.o
+    0x10001d6c   0x00000028   Code   RO          880    i.app_gatt_resource_access_req_handler  app_gap_task.o
+    0x10001d94   0x00000040   Code   RO          472    i.app_get_bd_addr_by_conhdl  app_util.o
+    0x10001dd4   0x0000000c   Code   RO          473    i.app_get_bond_nb   app_util.o
+    0x10001de0   0x00000024   Code   RO          474    i.app_get_bond_status  app_util.o
+    0x10001e04   0x00000028   Code   RO          476    i.app_get_conhdl_by_idx  app_util.o
+    0x10001e2c   0x0000001c   Code   RO          477    i.app_get_link_status_by_idx  app_util.o
+    0x10001e48   0x00000024   Code   RO          478    i.app_get_lk_sec_status  app_util.o
+    0x10001e6c   0x00000006   Code   RO          479    i.app_get_local_service_flag  app_util.o
+    0x10001e72   0x00000002   PAD
+    0x10001e74   0x0000000c   Code   RO          480    i.app_get_role      app_util.o
+    0x10001e80   0x00000026   Code   RO          481    i.app_i_to_array    app_util.o
+    0x10001ea6   0x00000002   PAD
+    0x10001ea8   0x00000068   Code   RO          610    i.app_init          app_env.o
+    0x10001f10   0x0000001c   Code   RO          482    i.app_init_local_smp_key  app_util.o
+    0x10001f2c   0x00000044   Code   RO          358    i.app_led_timer_handler  usr_design.o
+    0x10001f70   0x00000074   Code   RO          483    i.app_set_adv_data  app_util.o
+    0x10001fe4   0x00000060   Code   RO          484    i.app_set_link_status_by_conhdl  app_util.o
+    0x10002044   0x0000000c   Code   RO          485    i.app_set_role      app_util.o
+    0x10002050   0x0000006c   Code   RO          486    i.app_set_scan_rsp_data  app_util.o
+    0x100020bc   0x00000138   Code   RO          611    i.app_smp_init      app_env.o
+    0x100021f4   0x00000048   Code   RO         1071    i.app_smpc_chk_bd_addr_req_ind_handler  app_smp_task.o
+    0x1000223c   0x00000040   Code   RO         1021    i.app_smpc_chk_bd_addr_req_rsp  app_smp.o
+    0x1000227c   0x000000b8   Code   RO         1072    i.app_smpc_irk_req_ind_handler  app_smp_task.o
+    0x10002334   0x0000004c   Code   RO         1022    i.app_smpc_irk_req_rsp  app_smp.o
+    0x10002380   0x000000ac   Code   RO         1073    i.app_smpc_key_ind_handler  app_smp_task.o
+    0x1000242c   0x000000e4   Code   RO         1074    i.app_smpc_ltk_req_ind_handler  app_smp_task.o
+    0x10002510   0x00000054   Code   RO         1023    i.app_smpc_ltk_req_rsp  app_smp.o
+    0x10002564   0x0000002c   Code   RO         1075    i.app_smpc_sec_started_ind_handler  app_smp_task.o
+    0x10002590   0x00000044   Code   RO         1076    i.app_smpc_timeout_evt_handler  app_smp_task.o
+    0x100025d4   0x00000084   Code   RO         1077    i.app_smpc_tk_req_ind_handler  app_smp_task.o
+    0x10002658   0x0000003c   Code   RO         1025    i.app_smpc_tk_req_rsp  app_smp.o
+    0x10002694   0x00000024   Code   RO         1078    i.app_smpm_set_key_cfm_handler  app_smp_task.o
+    0x100026b8   0x00000034   Code   RO         1026    i.app_smpm_set_key_req  app_smp.o
+    0x100026ec   0x0000013c   Code   RO          359    i.app_task_msg_hdl  usr_design.o
+    0x10002828   0x00000002   Code   RO          696    i.app_uart_init     app_sys.o
+    0x1000282a   0x00000002   PAD
+    0x1000282c   0x00000038   Code   RO           12    i.assert_err        app_main.o
+    0x10002864   0x0000004c   Code   RO         2270    i.atts_req_error_ind_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x100028b0   0x0000002c   Code   RO         1347    i.bass_batt_level_upd_cfm_send  bass.o
+    0x100028dc   0x0000007c   Code   RO         1286    i.bass_batt_level_upd_req_handler  bass_task.o
+    0x10002958   0x00000104   Code   RO         1287    i.bass_create_db_req_handler  bass_task.o
+    0x10002a5c   0x00000088   Code   RO         1348    i.bass_disable      bass.o
+    0x10002ae4   0x00000110   Code   RO         1288    i.bass_enable_req_handler  bass_task.o
+    0x10002bf4   0x00000020   Code   RO         1349    i.bass_init         bass.o
+    0x10002c14   0x00000010   Code   RO         1930    i.battery_monitor_enable  analog.o
+    0x10002c24   0x00000028   Code   RO         2272    i.ble_ext_wakeup_allow  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002c4c   0x00000012   Code   RO         2273    i.ble_hw_sleep      qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002c5e   0x00000002   PAD
+    0x10002c60   0x00000110   Code   RO         2274    i.ble_init          qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002d70   0x00000030   Code   RO         2275    i.ble_sleep         qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002da0   0x00000024   Code   RO         2192    i.button_init       button.o
+    0x10002dc4   0x0000000c   Code   RO         2276    i.cal_cal_SetCAL0WithMask  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002dd0   0x0000000c   Code   RO         2277    i.cal_cal_SetCAL1WithMask  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002ddc   0x00000014   Code   RO         2278    i.check_ble_wakeup  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002df0   0x00000010   Code   RO         2279    i.co_buf_rx_get     qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002e00   0x00000064   Code   RO         2280    i.config_work_mode  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002e64   0x0000003c   Code   RO         2281    i.dc_dc_enable      qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002ea0   0x0000002c   Code   RO         2282    i.default_enter_sleep_cb  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002ecc   0x0000001c   Code   RO         2283    i.default_exit_sleep_cb  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002ee8   0x00000010   Code   RO         2284    i.delay             qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002ef8   0x00000014   Code   RO         2285    i.dp_dp_SetRegWithMask  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10002f0c   0x00000014   Code   RO         2373    i.dp_dp_SetRegWithMask  qn9020b2_lib_peripheral.lib(qnrf.o)
+    0x10002f20   0x00000178   Code   RO         1616    i.enter_sleep       sleep.o
+    0x10003098   0x00000020   Code   RO         2286    i.flash_on          qn9020b2_lib_peripheral.lib(lib.o)
+    0x100030b8   0x00000002   Code   RO         2287    i.foo1              qn9020b2_lib_peripheral.lib(lib.o)
+    0x100030ba   0x0000000a   Code   RO         2220    i.fputc             retarget.o
+    0x100030c4   0x0000009c   Code   RO         2288    i.fw_ble_sleep      qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003160   0x00000018   Code   RO         1289    i.gap_discon_cmp_evt_handler  bass_task.o
+    0x10003178   0x000000a4   Code   RO         2289    i.gap_discon_ind_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x1000321c   0x0000000c   Code   RO         1290    i.gatt_notify_cmp_evt_handler  bass_task.o
+    0x10003228   0x00000048   Code   RO         2290    i.gatt_read_char_req_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003270   0x000000fc   Code   RO         2291    i.gatt_write_char_req_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x1000336c   0x000000d0   Code   RO         1291    i.gatt_write_cmd_ind_handler  bass_task.o
+    0x1000343c   0x0000000a   Code   RO         1505    i.gpio_enable_interrupt  gpio.o
+    0x10003446   0x00000002   PAD
+    0x10003448   0x0000001c   Code   RO         1506    i.gpio_init         gpio.o
+    0x10003464   0x00000010   Code   RO          360    i.gpio_interrupt_callback  usr_design.o
+    0x10003474   0x00000014   Code   RO         1508    i.gpio_read_pin     gpio.o
+    0x10003488   0x0000000c   Code   RO         1509    i.gpio_read_pin_field  gpio.o
+    0x10003494   0x00000010   Code   RO         1510    i.gpio_set_direction  gpio.o
+    0x100034a4   0x0000000e   Code   RO         1511    i.gpio_set_direction_field  gpio.o
+    0x100034b2   0x0000001e   Code   RO         1513    i.gpio_sleep_allowed  gpio.o
+    0x100034d0   0x00000056   Code   RO         1515    i.gpio_wakeup_config  gpio.o
+    0x10003526   0x00000016   Code   RO         1516    i.gpio_write_pin    gpio.o
+    0x1000353c   0x0000004c   Code   RO         2292    i.ke_schedule       qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003588   0x00000028   Code   RO         2293    i.ke_time           qn9020b2_lib_peripheral.lib(lib.o)
+    0x100035b0   0x00000018   Code   RO         2294    i.ke_timer_empty    qn9020b2_lib_peripheral.lib(lib.o)
+    0x100035c8   0x0000005c   Code   RO         2295    i.l2cc_data_packet_ind_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003624   0x00000050   Code   RO         2296    i.l2cc_data_send_rsp_handler_patch  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003674   0x0000002e   Code   RO         2154    i.led_get           led.o
+    0x100036a2   0x00000038   Code   RO         2155    i.led_init          led.o
+    0x100036da   0x00000028   Code   RO         2157    i.led_set           led.o
+    0x10003702   0x00000002   PAD
+    0x10003704   0x0000003c   Code   RO         2297    i.lld_sleep_lpcycles_2_us  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003740   0x00000140   Code   RO           15    i.main              app_main.o
+    0x10003880   0x00000060   Code   RO         2298    i.nvds_copy         qn9020b2_lib_peripheral.lib(lib.o)
+    0x100038e0   0x00000030   Code   RO         2299    i.nvds_erase        qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003910   0x00000074   Code   RO         2301    i.nvds_restore_backup  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003984   0x00000054   Code   RO         2302    i.nvds_write        qn9020b2_lib_peripheral.lib(lib.o)
+    0x100039d8   0x000002f4   Code   RO         2303    i.plf_init          qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003ccc   0x00000010   Code   RO         2304    i.plf_reset_cb      qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003cdc   0x00000148   Code   RO         2305    i.powerup_calibration  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003e24   0x00000028   Code   RO         1220    i.prf_dispatch_disconnect  prf_utils.o
+    0x10003e4c   0x00000008   Code   RO         1221    i.prf_init          prf_utils.o
+    0x10003e54   0x0000001e   Code   RO         1222    i.prf_pack_char_pres_fmt  prf_utils.o
+    0x10003e72   0x00000002   PAD
+    0x10003e74   0x0000002c   Code   RO         1224    i.prf_server_error_ind_send  prf_utils.o
+    0x10003ea0   0x00000054   Code   RO         2308    i.restore_ble_setting  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003ef4   0x0000005c   Code   RO         2374    i.rf_enable         qn9020b2_lib_peripheral.lib(qnrf.o)
+    0x10003f50   0x00000020   Code   RO         2375    i.rf_enable_sw_set_freq  qn9020b2_lib_peripheral.lib(qnrf.o)
+    0x10003f70   0x00000024   Code   RO         2309    i.rwble_slot_2_lpcycles  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003f94   0x00000010   Code   RO         2311    i.set_dbg_info      qn9020b2_lib_peripheral.lib(lib.o)
+    0x10003fa4   0x00000018   Code   RO         1618    i.sleep_cb          sleep.o
+    0x10003fbc   0x00000034   Code   RO         1619    i.sleep_init        sleep.o
+    0x10003ff0   0x0000005a   Code   RO         2312    i.sleep_post_process  qn9020b2_lib_peripheral.lib(lib.o)
+    0x1000404a   0x00000002   PAD
+    0x1000404c   0x0000002c   Code   RO          271    i.spi_clock_off     system.o
+    0x10004078   0x0000000e   Code   RO         1839    i.syscon_SetADCCRWithMask  adc.o
+    0x10004086   0x0000000e   Code   RO         1934    i.syscon_SetAnalogCRWithMask  analog.o
+    0x10004094   0x0000000c   Code   RO         1620    i.syscon_SetCMDCRWithMask  sleep.o
+    0x100040a0   0x0000000c   Code   RO         1731    i.syscon_SetCMDCRWithMask  syscon.o
+    0x100040ac   0x0000000e   Code   RO         1621    i.syscon_SetIvrefX32WithMask  sleep.o
+    0x100040ba   0x0000000e   Code   RO         2313    i.syscon_SetIvrefX32WithMask  qn9020b2_lib_peripheral.lib(lib.o)
+    0x100040c8   0x0000000e   Code   RO         1622    i.syscon_SetPGCR0WithMask  sleep.o
+    0x100040d6   0x0000000e   Code   RO         1623    i.syscon_SetPGCR1WithMask  sleep.o
+    0x100040e4   0x0000000e   Code   RO         2314    i.syscon_SetPGCR1WithMask  qn9020b2_lib_peripheral.lib(lib.o)
+    0x100040f2   0x0000000e   Code   RO         1624    i.syscon_SetPGCR2WithMask  sleep.o
+    0x10004100   0x00000038   Code   RO         1736    i.syscon_set_ahb_clk  syscon.o
+    0x10004138   0x00000034   Code   RO         1737    i.syscon_set_apb_clk  syscon.o
+    0x1000416c   0x00000040   Code   RO         1738    i.syscon_set_ble_clk  syscon.o
+    0x100041ac   0x000000b8   Code   RO         1739    i.syscon_set_sysclk_src  syscon.o
+    0x10004264   0x0000002c   Code   RO         1740    i.syscon_set_timer_clk  syscon.o
+    0x10004290   0x00000070   Code   RO         1741    i.syscon_set_usart_clk  syscon.o
+    0x10004300   0x00000038   Code   RO          717    i.task_app_desc_register  app_task.o
+    0x10004338   0x00000038   Code   RO         1292    i.task_bass_desc_register  bass_task.o
+    0x10004370   0x000000c4   Code   RO         2315    i.task_gatt_desc_register  qn9020b2_lib_peripheral.lib(lib.o)
+    0x10004434   0x00000044   Code   RO          272    i.timer_clock_off   system.o
+    0x10004478   0x00000038   Code   RO         1393    i.uart_check_tx_free  uart.o
+    0x100044b0   0x0000002c   Code   RO          273    i.uart_clock_off    system.o
+    0x100044dc   0x00000080   Code   RO         1398    i.uart_init         uart.o
+    0x1000455c   0x00000038   Code   RO         1401    i.uart_tx_int_enable  uart.o
+    0x10004594   0x00000030   Code   RO          361    i.usr_button1_cb    usr_design.o
+    0x100045c4   0x00000058   Code   RO          362    i.usr_init          usr_design.o
+    0x1000461c   0x00000054   Code   RO          363    i.usr_led1_set      usr_design.o
+    0x10004670   0x00000058   Code   RO         1625    i.usr_sleep         sleep.o
+    0x100046c8   0x0000002c   Code   RO          364    i.usr_sleep_restore  usr_design.o
+    0x100046f4   0x00000014   Code   RO         1626    i.wakeup_32k_xtal_start_timer  sleep.o
+    0x10004708   0x00000050   Code   RO         1627    i.wakeup_32k_xtal_switch_clk  sleep.o
+    0x10004758   0x00000064   Code   RO         1629    i.wakeup_by_sleep_timer  sleep.o
+    0x100047bc   0x00000020   Code   RO         2003    i.wdt_irq_clear     wdt.o
+    0x100047dc   0x00000128   Data   RO          718    .constdata          app_task.o
+    0x10004904   0x00000030   Data   RO          719    .constdata          app_task.o
+    0x10004934   0x00000008   Data   RO         1293    .constdata          bass_task.o
+    0x1000493c   0x00000008   Data   RO         1294    .constdata          bass_task.o
+    0x10004944   0x00000018   Data   RO         1295    .constdata          bass_task.o
+    0x1000495c   0x00000008   Data   RO         1296    .constdata          bass_task.o
+    0x10004964   0x00000020   Data   RO         1297    .constdata          bass_task.o
+    0x10004984   0x0000006c   Data   RO         1351    .constdata          bass.o
+    0x100049f0   0x00000002   Data   RO         1352    .constdata          bass.o
+    0x100049f2   0x00000005   Data   RO         1353    .constdata          bass.o
+    0x100049f7   0x00000033   Data   RO         1404    .constdata          uart.o
+    0x10004a2a   0x00000002   PAD
+    0x10004a2c   0x00000010   Data   RO         2317    .constdata          qn9020b2_lib_peripheral.lib(lib.o)
+    0x10004a3c   0x00000081   Data   RO         2722    .constdata          mc_p.l(ctype_o.o)
+    0x10004abd   0x00000003   PAD
+    0x10004ac0   0x00000004   Data   RO         2723    .constdata          mc_p.l(ctype_o.o)
+    0x10004ac4   0x000000d6   Data   RO          881    .conststring        app_gap_task.o
+    0x10004b9a   0x00000002   PAD
+    0x10004b9c   0x000000ad   Data   RO         1079    .conststring        app_smp_task.o
+    0x10004c49   0x00000003   PAD
+    0x10004c4c   0x00000000   Data   RO         2753    Region$$Table       anon$$obj.o
+    0x10004c4c   0x00000024   Data   RW          365    .data               usr_design.o
+    0x10004c70   0x00000002   Data   RW          720    .data               app_task.o
+    0x10004c72   0x00000002   PAD
+    0x10004c74   0x00000004   Data   RW         1139    .data               app_bass_task.o
+    0x10004c78   0x00000002   Data   RW         1298    .data               bass_task.o
+    0x10004c7a   0x00000002   PAD
+    0x10004c7c   0x00000004   Data   RW         1518    .data               gpio.o
+    0x10004c80   0x0000001c   Data   RW         1630    .data               sleep.o
+    0x10004c9c   0x0000000c   Data   RW         1742    .data               syscon.o
+    0x10004ca8   0x0000000c   Data   RW         1841    .data               adc.o
+    0x10004cb4   0x0000000c   Data   RW         1936    .data               analog.o
+    0x10004cc0   0x00000004   Data   RW         2007    .data               wdt.o
+    0x10004cc4   0x00000020   Data   RW         2068    .data               timer.o
+    0x10004ce4   0x00000004   Data   RW         2221    .data               retarget.o
+    0x10004ce8   0x00000020   Data   RW         2318    .data               qn9020b2_lib_peripheral.lib(lib.o)
+    0x10004d08   0x00000004   Data   RW         2398    .data               mc_p.l(rand.o)
+    0x10004d0c   0x00000004   Data   RW         2702    .data               mc_p.l(errno.o)
+    0x10004d10   0x000004e4   Zero   RW           16    .bss                app_main.o
+    0x100051f4   0x0000010c   Zero   RW          612    .bss                app_env.o
+    0x10005300   0x0000000a   Zero   RW         1350    .bss                bass.o
+    0x1000530a   0x00000002   PAD
+    0x1000530c   0x00000030   Zero   RW         1403    .bss                uart.o
+    0x1000533c   0x00000014   Zero   RW         1840    .bss                adc.o
+    0x10005350   0x000003a0   Zero   RW         2316    .bss                qn9020b2_lib_peripheral.lib(lib.o)
+    0x100056f0   0x00000200   Zero   RW            1    STACK               startup.o
+

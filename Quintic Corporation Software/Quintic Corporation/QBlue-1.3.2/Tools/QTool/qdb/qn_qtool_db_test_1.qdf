@@ -1,0 +1,16 @@
+# destroy_db  0x0001 0x0010
+#      Handle   UUID (16 or 128bit)                 Attribute Type                                        Permissions            Initial Parameter Value
+#                                                                                                         RD   WR   IND  NOT
+# TASK_GAP
+1      0001     2800                                Primary_Service                                       Y    N    N    N       {Service=0x1800("Generic Access Profile")}
+2      0002     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0042,UUID=0x2A00}
+3      0003     2A00                                Device_Name                                           Y    N    N    N       "Test Database"
+4      0004     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0044,UUID=0x2A01}
+5      0005     2A01                                Appearance                                            Y    N    N    N       0x11
+6      0006     2803                                Characteristic                                        Y    N    N    N       {properties=0x02,handle=0x0046,UUID=0x2A04}
+7      0007     2A04                                Peripheral_Preferred_Connection_Parameters            Y    N    N    N       {minimum_connection_interval=0x0064,maximum_connection_interval=0x00C8,slave_latency=0x0000,connection_supervision_timeout=0x07D0}
+# TASK_GATT
+16     0010     2800                                Primary_Service                                       Y    N    N    N       {Service=0x1801("Attribute Profile")}
+17     0011     2803                                Characteristic                                        Y    N    N    N       {properties=0x20,handle=0x0052,UUID=0x2A05}
+18     0012     2A05                                Service_Changed                                       N    N    Y    Y       {start_handle=0x0001,end_handle=0xFFFF}
+# End

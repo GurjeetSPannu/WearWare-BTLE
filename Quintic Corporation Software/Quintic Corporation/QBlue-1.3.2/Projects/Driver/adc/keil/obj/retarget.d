@@ -1,0 +1,13 @@
+.\obj\retarget.o: ..\..\src\retarget\retarget.c
+.\obj\retarget.o: ..\src\driver_config.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdbool.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\obj\retarget.o: ..\..\src\cmsis\driver_QN9020.h
+.\obj\retarget.o: ..\..\src\cmsis\QN9020.h
+.\obj\retarget.o: ..\..\src\cmsis\core_cm0.h
+.\obj\retarget.o: ..\..\src\cmsis\core_cmInstr.h
+.\obj\retarget.o: ..\..\src\cmsis\core_cmFunc.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\time.h
+.\obj\retarget.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\rt_misc.h

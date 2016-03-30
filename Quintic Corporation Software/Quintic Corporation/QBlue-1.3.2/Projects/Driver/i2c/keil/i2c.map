@@ -1,0 +1,578 @@
+Component: ARM Compiler 5.05 update 1 (build 106) Tool: armlink [4d0efa]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for __initial_sp
+    startup.o(RESET) refers to startup.o(.text) for Reset_Handler
+    startup.o(RESET) refers to gpio.o(.text) for GPIO_IRQHandler
+    startup.o(RESET) refers to rtc.o(.text) for RTC_CAP_IRQHandler
+    startup.o(RESET) refers to i2c.o(.text) for I2C_IRQHandler
+    startup.o(RESET) refers to timer.o(.text) for TIMER0_IRQHandler
+    startup.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system.o(.text) refers to syscon.o(.text) for syscon_set_sysclk_src
+    system.o(.text) refers to calibration.o(.text) for calibration_init
+    gpio.o(.text) refers to gpio.o(.data) for gpio_env
+    i2c.o(.text) refers to i2c.o(.bss) for i2c_env
+    rtc.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    rtc.o(.text) refers to localtime_w.o(.text) for localtime
+    rtc.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    rtc.o(.text) refers to memseta.o(.text) for __aeabi_memclr4
+    rtc.o(.text) refers to mktime.o(.text) for mktime
+    rtc.o(.text) refers to rtc.o(.bss) for rtc_env
+    rtc.o(.text) refers to rtc.o(.data) for rtc_capture_env
+    sleep.o(.text) refers to lib.o(.text) for check_ble_wakeup
+    sleep.o(.text) refers to gpio.o(.text) for gpio_wakeup_config
+    sleep.o(.text) refers to syscon.o(.text) for syscon_set_sysclk_src
+    sleep.o(.text) refers to sleep.o(.data) for sleep_env
+    syscon.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    syscon.o(.text) refers to timer.o(.text) for timer_init
+    syscon.o(.text) refers to syscon.o(.data) for g_SystemClock
+    syscon.o(.text) refers to timer.o(.data) for timer1_env
+    syscon.o(.text) refers to rtc.o(.text) for rtc_calibration
+    syscon.o(.text) refers to sleep.o(.data) for sleep_env
+    timer.o(.text) refers to timer.o(.data) for timer0_env
+    timer.o(.text) refers to sleep.o(.data) for sleep_env
+    i2c_example.o(.text) refers to system.o(.text) for SystemInit
+    i2c_example.o(.text) refers to i2c.o(.text) for i2c_init
+    i2c_example.o(.text) refers to i2c_example.o(.bss) for i2cbuffer
+    calibration.o(.text) refers to qnrf.o(.text) for rf_enable
+    lib.o(.text) refers to calibration.o(.text) for calibration_init
+    lib.o(.text) refers to qnrf.o(.text) for rf_enable_sw_set_freq
+    lib.o(.text) refers to lib.o(.data) for dc_dc_flag
+    lib.o(.text) refers to math.o(.text) for __rd_ble_reg
+    qnrf.o(.text) refers to qnrf.o(.constdata) for rf_freq_tab
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    localtime.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    localtime.o(.text) refers to localtime.o(.bss) for .bss
+    localtime.o(.text) refers to localtime.o(.constdata) for .constdata
+    mktime.o(.text) refers to idiv.o(.text) for __aeabi_idivmod
+    mktime.o(.text) refers to localtime_i.o(.text) for _localtime
+    mktime.o(.text) refers to mktime.o(.constdata) for .constdata
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to i2c_example.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to i2c_example.o(.text) for main
+    localtime_w.o(.text) refers to localtime_i.o(.text) for _localtime
+    localtime_w.o(.text) refers to localtime_w.o(.bss) for .bss
+    localtime_i.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    localtime_i.o(.text) refers to localtime_i.o(.constdata) for .constdata
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing system.o(.rev16_text), (4 bytes).
+    Removing system.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing i2c.o(.rev16_text), (4 bytes).
+    Removing i2c.o(.revsh_text), (4 bytes).
+    Removing rtc.o(.rev16_text), (4 bytes).
+    Removing rtc.o(.revsh_text), (4 bytes).
+    Removing sleep.o(.rev16_text), (4 bytes).
+    Removing sleep.o(.revsh_text), (4 bytes).
+    Removing sleep.o(.text), (936 bytes).
+    Removing syscon.o(.rev16_text), (4 bytes).
+    Removing syscon.o(.revsh_text), (4 bytes).
+    Removing timer.o(.rev16_text), (4 bytes).
+    Removing timer.o(.revsh_text), (4 bytes).
+    Removing i2c_example.o(.rev16_text), (4 bytes).
+    Removing i2c_example.o(.revsh_text), (4 bytes).
+    Removing calibration.o(.rev16_text), (4 bytes).
+    Removing calibration.o(.revsh_text), (4 bytes).
+    Removing lib.o(.rev16_text), (4 bytes).
+    Removing lib.o(.revsh_text), (4 bytes).
+    Removing lib.o(.text), (1448 bytes).
+    Removing lib.o(.data), (1 bytes).
+    Removing qnrf.o(.rev16_text), (4 bytes).
+    Removing qnrf.o(.revsh_text), (4 bytes).
+    Removing math.o(.text), (430 bytes).
+
+27 unused section(s) (total 2903 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/time/localtime.c        0x00000000   Number         0  localtime.o ABSOLUTE
+    ../clib/microlib/time/localtime.c        0x00000000   Number         0  localtime_i.o ABSOLUTE
+    ../clib/microlib/time/localtime.c        0x00000000   Number         0  localtime_w.o ABSOLUTE
+    ../clib/microlib/time/mktime.c           0x00000000   Number         0  mktime.o ABSOLUTE
+    ..\..\src\driver\gpio.c                  0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\..\src\driver\i2c.c                   0x00000000   Number         0  i2c.o ABSOLUTE
+    ..\..\src\driver\rtc.c                   0x00000000   Number         0  rtc.o ABSOLUTE
+    ..\..\src\driver\sleep.c                 0x00000000   Number         0  sleep.o ABSOLUTE
+    ..\..\src\driver\syscon.c                0x00000000   Number         0  syscon.o ABSOLUTE
+    ..\..\src\driver\timer.c                 0x00000000   Number         0  timer.o ABSOLUTE
+    ..\..\src\lib\calibration.c              0x00000000   Number         0  calibration.o ABSOLUTE
+    ..\..\src\lib\lib.c                      0x00000000   Number         0  lib.o ABSOLUTE
+    ..\..\src\lib\math.s                     0x00000000   Number         0  math.o ABSOLUTE
+    ..\..\src\lib\qnrf.c                     0x00000000   Number         0  qnrf.o ABSOLUTE
+    ..\..\src\startup\keil\startup.s         0x00000000   Number         0  startup.o ABSOLUTE
+    ..\\..\\src\\driver\\gpio.c              0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\..\\src\\driver\\i2c.c               0x00000000   Number         0  i2c.o ABSOLUTE
+    ..\\..\\src\\driver\\rtc.c               0x00000000   Number         0  rtc.o ABSOLUTE
+    ..\\..\\src\\driver\\sleep.c             0x00000000   Number         0  sleep.o ABSOLUTE
+    ..\\..\\src\\driver\\syscon.c            0x00000000   Number         0  syscon.o ABSOLUTE
+    ..\\..\\src\\driver\\timer.c             0x00000000   Number         0  timer.o ABSOLUTE
+    ..\\..\\src\\lib\\calibration.c          0x00000000   Number         0  calibration.o ABSOLUTE
+    ..\\..\\src\\lib\\lib.c                  0x00000000   Number         0  lib.o ABSOLUTE
+    ..\\..\\src\\lib\\qnrf.c                 0x00000000   Number         0  qnrf.o ABSOLUTE
+    ..\\src\\i2c_example.c                   0x00000000   Number         0  i2c_example.o ABSOLUTE
+    ..\\src\\system.c                        0x00000000   Number         0  system.o ABSOLUTE
+    ..\src\i2c_example.c                     0x00000000   Number         0  i2c_example.o ABSOLUTE
+    ..\src\system.c                          0x00000000   Number         0  system.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    RESET                                    0x10000000   Section      192  startup.o(RESET)
+    .ARM.Collect$$$$00000000                 0x100000c0   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x100000c0   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x100000c4   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x100000c8   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x100000c8   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x100000c8   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x100000d0   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x100000d0   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x100000d0   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x100000d0   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x100000d4   Section       48  startup.o(.text)
+    .text                                    0x10000104   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x10000128   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x10000136   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x10000138   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .text                                    0x10000158   Section        0  system.o(.text)
+    syscon_SetCMDCRWithMask                  0x10000159   Thumb Code    22  system.o(.text)
+    syscon_SetPGCR1WithMask                  0x1000016f   Thumb Code    26  system.o(.text)
+    uart_clock_off                           0x10000189   Thumb Code    50  system.o(.text)
+    spi_clock_off                            0x100001bb   Thumb Code    50  system.o(.text)
+    timer_clock_off                          0x100001ed   Thumb Code    64  system.o(.text)
+    SystemIOCfg                              0x1000022d   Thumb Code    40  system.o(.text)
+    syscon_SetCRSS                           0x100003a9   Thumb Code     4  system.o(.text)
+    syscon_SetCRSC                           0x100003ad   Thumb Code     4  system.o(.text)
+    .text                                    0x100003e4   Section        0  gpio.o(.text)
+    gpio_gpio_SetOutEnable                   0x100006c1   Thumb Code     4  gpio.o(.text)
+    gpio_gpio_ClrOutEnable                   0x100006c5   Thumb Code     4  gpio.o(.text)
+    gpio_gpio_SetIntRisingEdge               0x100006c9   Thumb Code     6  gpio.o(.text)
+    gpio_gpio_SetIntFallingEdge              0x100006cf   Thumb Code     6  gpio.o(.text)
+    gpio_gpio_SetOutputData                  0x100006d5   Thumb Code     8  gpio.o(.text)
+    ctz                                      0x100006dd   Thumb Code    70  gpio.o(.text)
+    .text                                    0x1000072c   Section        0  i2c.o(.text)
+    i2c_i2c_SetTXD                           0x10000c3d   Thumb Code     4  i2c.o(.text)
+    i2c_i2c_ClrIntStatus                     0x10000c41   Thumb Code     4  i2c.o(.text)
+    .text                                    0x10000c48   Section        0  rtc.o(.text)
+    rtc_rtc_SetCRWithMask                    0x10000c49   Thumb Code    22  rtc.o(.text)
+    rtc_time_parse                           0x10000c91   Thumb Code    54  rtc.o(.text)
+    NVIC_EnableIRQ                           0x10000f2f   Thumb Code    14  rtc.o(.text)
+    rtc_rtc_ClrSR                            0x10000f3d   Thumb Code     4  rtc.o(.text)
+    rtc_rtc_GetSR                            0x10000f41   Thumb Code     6  rtc.o(.text)
+    .text                                    0x10000f58   Section        0  syscon.o(.text)
+    syscon_SetCMDCRWithMask                  0x10000f59   Thumb Code    22  syscon.o(.text)
+    syscon_SetPGCR1WithMask                  0x10000f6f   Thumb Code    26  syscon.o(.text)
+    syscon_SetCRSS                           0x1000140f   Thumb Code     4  syscon.o(.text)
+    syscon_SetCRSC                           0x10001413   Thumb Code     4  syscon.o(.text)
+    timer_enable                             0x10001417   Thumb Code   102  syscon.o(.text)
+    .text                                    0x10001494   Section        0  timer.o(.text)
+    timer_timer_SetCRWithMask                0x10001495   Thumb Code    22  timer.o(.text)
+    NVIC_EnableIRQ                           0x10001859   Thumb Code    14  timer.o(.text)
+    syscon_SetCRSC                           0x10001867   Thumb Code     4  timer.o(.text)
+    timer_timer_SetCR                        0x1000186b   Thumb Code     4  timer.o(.text)
+    timer_timer_ClrIntFlag                   0x1000186f   Thumb Code     4  timer.o(.text)
+    timer_timer_GetIntFlag                   0x10001873   Thumb Code     6  timer.o(.text)
+    timer_timer_SetTOPR                      0x10001879   Thumb Code     4  timer.o(.text)
+    timer_enable                             0x1000187d   Thumb Code   136  timer.o(.text)
+    timer_reset                              0x10001905   Thumb Code    94  timer.o(.text)
+    syscon_SetCRSS                           0x10001963   Thumb Code     4  timer.o(.text)
+    .text                                    0x10001978   Section        0  i2c_example.o(.text)
+    .text                                    0x10001a6c   Section        0  calibration.o(.text)
+    syscon_SetPGCR1WithMask                  0x10001a6d   Thumb Code    26  calibration.o(.text)
+    cal_cal_SetCAL0WithMask                  0x10001a87   Thumb Code    22  calibration.o(.text)
+    cal_cal_SetCAL1WithMask                  0x10001a9d   Thumb Code    22  calibration.o(.text)
+    cal_cal_SetCAL3WithMask                  0x10001ab3   Thumb Code    22  calibration.o(.text)
+    cal_cal_SetCAL4WithMask                  0x10001ac9   Thumb Code    22  calibration.o(.text)
+    cal_cal_ClrSR                            0x10001f0f   Thumb Code     4  calibration.o(.text)
+    cal_cal_GetSR                            0x10001f13   Thumb Code     6  calibration.o(.text)
+    .text                                    0x10001f1c   Section        0  qnrf.o(.text)
+    syscon_SetLO2WithMask                    0x10001f1d   Thumb Code    26  qnrf.o(.text)
+    dp_dp_SetRegWithMask                     0x10001f37   Thumb Code    30  qnrf.o(.text)
+    .text                                    0x100020b4   Section        0  uidiv.o(.text)
+    .text                                    0x100020e0   Section        0  idiv.o(.text)
+    .text                                    0x10002108   Section        0  mktime.o(.text)
+    .text                                    0x10002194   Section        0  memseta.o(.text)
+    .text                                    0x100021b8   Section        0  localtime_w.o(.text)
+    .text                                    0x100021c8   Section        0  localtime_i.o(.text)
+    .constdata                               0x1000223c   Section      337  qnrf.o(.constdata)
+    .constdata                               0x1000238d   Section       12  mktime.o(.constdata)
+    monlen                                   0x1000238d   Data          12  mktime.o(.constdata)
+    .constdata                               0x10002399   Section       12  localtime_i.o(.constdata)
+    monlen                                   0x10002399   Data          12  localtime_i.o(.constdata)
+    .data                                    0x100023a8   Section        4  gpio.o(.data)
+    gpio_env                                 0x100023a8   Data           4  gpio.o(.data)
+    .data                                    0x100023ac   Section        4  rtc.o(.data)
+    .data                                    0x100023b0   Section       25  sleep.o(.data)
+    .data                                    0x100023cc   Section       12  syscon.o(.data)
+    .data                                    0x100023d8   Section       32  timer.o(.data)
+    .bss                                     0x100023f8   Section       20  i2c.o(.bss)
+    i2c_env                                  0x100023f8   Data          20  i2c.o(.bss)
+    .bss                                     0x1000240c   Section       12  rtc.o(.bss)
+    .bss                                     0x10002418   Section      104  i2c_example.o(.bss)
+    .bss                                     0x10002480   Section       44  localtime_w.o(.bss)
+    _tms                                     0x10002480   Data          44  localtime_w.o(.bss)
+    STACK                                    0x100024b0   Section      512  startup.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  i2c_example.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  startup.o ABSOLUTE
+    __Vectors                                0x10000000   Data           4  startup.o(RESET)
+    __Vectors_End                            0x100000c0   Data           0  startup.o(RESET)
+    __main                                   0x100000c1   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x100000c1   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x100000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x100000c9   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x100000c9   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x100000c9   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x100000c9   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x100000d1   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x100000d1   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x100000d5   Thumb Code    14  startup.o(.text)
+    NMI_Handler                              0x100000e3   Thumb Code     2  startup.o(.text)
+    HardFault_Handler                        0x100000e5   Thumb Code     2  startup.o(.text)
+    MemManage_Handler                        0x100000e7   Thumb Code     2  startup.o(.text)
+    BusFault_Handler                         0x100000e9   Thumb Code     2  startup.o(.text)
+    UsageFault_Handler                       0x100000eb   Thumb Code     2  startup.o(.text)
+    SVC_Handler                              0x100000ed   Thumb Code     2  startup.o(.text)
+    DebugMon_Handler                         0x100000ef   Thumb Code     2  startup.o(.text)
+    PendSV_Handler                           0x100000f1   Thumb Code     2  startup.o(.text)
+    SysTick_Handler                          0x100000f3   Thumb Code     2  startup.o(.text)
+    ADC_IRQHandler                           0x100000f5   Thumb Code     0  startup.o(.text)
+    BLE_IRQHandler                           0x100000f5   Thumb Code     0  startup.o(.text)
+    CALIB_IRQHandler                         0x100000f5   Thumb Code     0  startup.o(.text)
+    COMPARATOR0_IRQHandler                   0x100000f5   Thumb Code     0  startup.o(.text)
+    COMPARATOR1_IRQHandler                   0x100000f5   Thumb Code     0  startup.o(.text)
+    DMA_IRQHandler                           0x100000f5   Thumb Code     0  startup.o(.text)
+    OSC_EN_IRQHandler                        0x100000f5   Thumb Code     0  startup.o(.text)
+    PWM0_IRQHandler                          0x100000f5   Thumb Code     0  startup.o(.text)
+    PWM1_IRQHandler                          0x100000f5   Thumb Code     0  startup.o(.text)
+    SPI0_RX_IRQHandler                       0x100000f5   Thumb Code     0  startup.o(.text)
+    SPI0_TX_IRQHandler                       0x100000f5   Thumb Code     0  startup.o(.text)
+    SPI1_RX_IRQHandler                       0x100000f5   Thumb Code     0  startup.o(.text)
+    SPI1_TX_IRQHandler                       0x100000f5   Thumb Code     0  startup.o(.text)
+    TUNER_RX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    TUNER_SETTING_IRQHandler                 0x100000f5   Thumb Code     0  startup.o(.text)
+    TUNER_TX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    UART0_RX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    UART0_TX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    UART1_RX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    UART1_TX_IRQHandler                      0x100000f5   Thumb Code     0  startup.o(.text)
+    WDT_IRQHandler                           0x100000f5   Thumb Code     0  startup.o(.text)
+    __scatterload                            0x10000105   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x10000105   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x10000129   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x10000137   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x10000139   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x10000148   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x10000158   Number         0  anon$$obj.o(Region$$Table)
+    SystemInit                               0x10000255   Thumb Code   340  system.o(.text)
+    GPIO_IRQHandler                          0x100003e5   Thumb Code    60  gpio.o(.text)
+    gpio_init                                0x10000421   Thumb Code    34  gpio.o(.text)
+    gpio_read_pin                            0x10000443   Thumb Code    30  gpio.o(.text)
+    gpio_write_pin                           0x10000461   Thumb Code    46  gpio.o(.text)
+    gpio_set_direction                       0x1000048f   Thumb Code    34  gpio.o(.text)
+    gpio_read_pin_field                      0x100004b1   Thumb Code    18  gpio.o(.text)
+    gpio_write_pin_field                     0x100004c3   Thumb Code    46  gpio.o(.text)
+    gpio_set_direction_field                 0x100004f1   Thumb Code    40  gpio.o(.text)
+    gpio_toggle_pin                          0x10000519   Thumb Code    32  gpio.o(.text)
+    gpio_set_interrupt                       0x10000539   Thumb Code    82  gpio.o(.text)
+    gpio_enable_interrupt                    0x1000058b   Thumb Code    12  gpio.o(.text)
+    gpio_disable_interrupt                   0x10000597   Thumb Code    12  gpio.o(.text)
+    gpio_pull_set                            0x100005a3   Thumb Code   104  gpio.o(.text)
+    gpio_wakeup_config                       0x1000060b   Thumb Code   144  gpio.o(.text)
+    gpio_sleep_allowed                       0x1000069b   Thumb Code    38  gpio.o(.text)
+    I2C_IRQHandler                           0x1000072d   Thumb Code   324  i2c.o(.text)
+    i2c_init                                 0x10000871   Thumb Code    78  i2c.o(.text)
+    i2c_bus_check                            0x100008bf   Thumb Code    34  i2c.o(.text)
+    i2c_read                                 0x100008e1   Thumb Code   158  i2c.o(.text)
+    i2c_write                                0x1000097f   Thumb Code   100  i2c.o(.text)
+    I2C_BYTE_READ                            0x100009e3   Thumb Code    56  i2c.o(.text)
+    I2C_BYTE_READ2                           0x10000a1b   Thumb Code    68  i2c.o(.text)
+    I2C_nBYTE_READ                           0x10000a5f   Thumb Code   100  i2c.o(.text)
+    I2C_nBYTE_READ2                          0x10000ac3   Thumb Code   124  i2c.o(.text)
+    I2C_BYTE_WRITE                           0x10000b3f   Thumb Code    48  i2c.o(.text)
+    I2C_BYTE_WRITE2                          0x10000b6f   Thumb Code    58  i2c.o(.text)
+    I2C_nBYTE_WRITE                          0x10000ba9   Thumb Code    70  i2c.o(.text)
+    I2C_nBYTE_WRITE2                         0x10000bef   Thumb Code    78  i2c.o(.text)
+    dec2bcd                                  0x10000c5f   Thumb Code    30  rtc.o(.text)
+    bcd2dec                                  0x10000c7d   Thumb Code    20  rtc.o(.text)
+    rtc_time_get                             0x10000cc7   Thumb Code    32  rtc.o(.text)
+    RTC_IRQHandler                           0x10000ce7   Thumb Code    50  rtc.o(.text)
+    RTC_CAP_IRQHandler                       0x10000d19   Thumb Code    60  rtc.o(.text)
+    rtc_init                                 0x10000d55   Thumb Code    46  rtc.o(.text)
+    rtc_calibration                          0x10000d83   Thumb Code    62  rtc.o(.text)
+    rtc_correction                           0x10000dc1   Thumb Code    84  rtc.o(.text)
+    rtc_capture_enable                       0x10000e15   Thumb Code    90  rtc.o(.text)
+    rtc_capture_disable                      0x10000e6f   Thumb Code    38  rtc.o(.text)
+    rtc_time_set                             0x10000e95   Thumb Code   154  rtc.o(.text)
+    syscon_set_sysclk_src                    0x10000f89   Thumb Code   210  syscon.o(.text)
+    syscon_set_ahb_clk                       0x1000105b   Thumb Code    64  syscon.o(.text)
+    syscon_get_ahb_clk                       0x1000109b   Thumb Code    56  syscon.o(.text)
+    syscon_set_apb_clk                       0x100010d3   Thumb Code    62  syscon.o(.text)
+    syscon_get_apb_clk                       0x10001111   Thumb Code    54  syscon.o(.text)
+    syscon_set_timer_clk                     0x10001147   Thumb Code    50  syscon.o(.text)
+    syscon_set_usart_clk                     0x10001179   Thumb Code   112  syscon.o(.text)
+    syscon_set_ble_clk                       0x100011e9   Thumb Code    66  syscon.o(.text)
+    syscon_get_reset_cause                   0x1000122b   Thumb Code   120  syscon.o(.text)
+    syscon_enable_transceiver                0x100012a3   Thumb Code    48  syscon.o(.text)
+    clock_32k_correction_init                0x100012d3   Thumb Code    22  syscon.o(.text)
+    clock_32k_correction_enable              0x100012e9   Thumb Code    46  syscon.o(.text)
+    clock_32k_correction_cb                  0x10001317   Thumb Code   238  syscon.o(.text)
+    rco_calibration_cb                       0x10001405   Thumb Code    10  syscon.o(.text)
+    timer_delay                              0x100014ab   Thumb Code    80  timer.o(.text)
+    TIMER0_IRQHandler                        0x100014fb   Thumb Code    84  timer.o(.text)
+    TIMER1_IRQHandler                        0x1000154f   Thumb Code    84  timer.o(.text)
+    TIMER2_IRQHandler                        0x100015a3   Thumb Code    84  timer.o(.text)
+    TIMER3_IRQHandler                        0x100015f7   Thumb Code    84  timer.o(.text)
+    timer_init                               0x1000164b   Thumb Code   158  timer.o(.text)
+    timer_config                             0x100016e9   Thumb Code    98  timer.o(.text)
+    timer_pwm_config                         0x1000174b   Thumb Code   130  timer.o(.text)
+    timer_capture_config                     0x100017cd   Thumb Code   140  timer.o(.text)
+    i2c_io_config                            0x10001979   Thumb Code    38  i2c_example.o(.text)
+    main                                     0x1000199f   Thumb Code   190  i2c_example.o(.text)
+    calibration_init                         0x10001adf   Thumb Code   182  calibration.o(.text)
+    seq_calibration                          0x10001b95   Thumb Code   146  calibration.o(.text)
+    freq_hop_calibration                     0x10001c27   Thumb Code   148  calibration.o(.text)
+    ref_pll_calibration                      0x10001cbb   Thumb Code    48  calibration.o(.text)
+    rc_calibration                           0x10001ceb   Thumb Code    46  calibration.o(.text)
+    lo_calibration                           0x10001d19   Thumb Code    60  calibration.o(.text)
+    lo_kcal_calibration                      0x10001d55   Thumb Code    62  calibration.o(.text)
+    pa_calibration                           0x10001d93   Thumb Code   196  calibration.o(.text)
+    r_calibration                            0x10001e57   Thumb Code    50  calibration.o(.text)
+    ros_calibration                          0x10001e89   Thumb Code    50  calibration.o(.text)
+    rco_calibration                          0x10001ebb   Thumb Code    84  calibration.o(.text)
+    rf_enable_sw_set_freq                    0x10001f55   Thumb Code    28  qnrf.o(.text)
+    rf_set_freq                              0x10001f71   Thumb Code   112  qnrf.o(.text)
+    rf_enable                                0x10001fe1   Thumb Code   102  qnrf.o(.text)
+    rf_tx_power_level_set                    0x10002047   Thumb Code    46  qnrf.o(.text)
+    rf_tx_power_level_get                    0x10002075   Thumb Code    46  qnrf.o(.text)
+    __aeabi_uidiv                            0x100020b5   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x100020b5   Thumb Code    44  uidiv.o(.text)
+    __aeabi_idiv                             0x100020e1   Thumb Code     0  idiv.o(.text)
+    __aeabi_idivmod                          0x100020e1   Thumb Code    40  idiv.o(.text)
+    mktime                                   0x10002109   Thumb Code   124  mktime.o(.text)
+    __aeabi_memset                           0x10002195   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x10002195   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x10002195   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x100021a3   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x100021a3   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x100021a3   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x100021a7   Thumb Code    18  memseta.o(.text)
+    localtime                                0x100021b9   Thumb Code    10  localtime_w.o(.text)
+    _localtime                               0x100021c9   Thumb Code   104  localtime_i.o(.text)
+    rf_freq_tab                              0x1000223c   Data         324  qnrf.o(.constdata)
+    rf_tx_gain_tab                           0x10002380   Data          13  qnrf.o(.constdata)
+    rtc_capture_env                          0x100023ac   Data           4  rtc.o(.data)
+    sleep_env                                0x100023b0   Data          20  sleep.o(.data)
+    PGCR1_restore                            0x100023c4   Data           4  sleep.o(.data)
+    low_power_mode_en                        0x100023c8   Data           1  sleep.o(.data)
+    g_SystemClock                            0x100023cc   Data           4  syscon.o(.data)
+    g_AhbClock                               0x100023d0   Data           4  syscon.o(.data)
+    g_ApbClock                               0x100023d4   Data           4  syscon.o(.data)
+    timer0_env                               0x100023d8   Data           8  timer.o(.data)
+    timer1_env                               0x100023e0   Data           8  timer.o(.data)
+    timer2_env                               0x100023e8   Data           8  timer.o(.data)
+    timer3_env                               0x100023f0   Data           8  timer.o(.data)
+    rtc_env                                  0x1000240c   Data          12  rtc.o(.bss)
+    i2cbuffer                                0x10002418   Data         104  i2c_example.o(.bss)
+    __initial_sp                             0x100026b0   Data           0  startup.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x100000c1
+
+  Load Region LR_ROM1 (Base: 0x10000000, Size: 0x000023f8, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region APP_START_CODE (Base: 0x10000000, Size: 0x00000158, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000000   0x000000c0   Data   RO            3    RESET               startup.o
+    0x100000c0   0x00000000   Code   RO          365  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x100000c0   0x00000004   Code   RO          381    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x100000c4   0x00000004   Code   RO          384    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x100000c8   0x00000000   Code   RO          386    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x100000c8   0x00000000   Code   RO          388    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x100000c8   0x00000008   Code   RO          389    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x100000d0   0x00000000   Code   RO          391    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x100000d0   0x00000000   Code   RO          393    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x100000d0   0x00000004   Code   RO          382    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x100000d4   0x00000030   Code   RO            4    .text               startup.o
+    0x10000104   0x00000024   Code   RO          401    .text               mc_p.l(init.o)
+    0x10000128   0x0000000e   Code   RO          405    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x10000136   0x00000002   Code   RO          406    i.__scatterload_null  mc_p.l(handlers.o)
+    0x10000138   0x0000000e   Code   RO          407    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x10000146   0x00000002   PAD
+    0x10000148   0x00000010   Data   RO          403    Region$$Table       anon$$obj.o
+
+
+    Execution Region APP_CODE (Base: 0x10000158, Size: 0x00002558, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x10000158   0x0000028c   Code   RO           12    .text               system.o
+    0x100003e4   0x00000348   Code   RO          108    .text               gpio.o
+    0x1000072c   0x0000051c   Code   RO          143    .text               i2c.o
+    0x10000c48   0x00000310   Code   RO          171    .text               rtc.o
+    0x10000f58   0x0000053c   Code   RO          246    .text               syscon.o
+    0x10001494   0x000004e4   Code   RO          287    .text               timer.o
+    0x10001978   0x000000f4   Code   RO          316    .text               i2c_example.o
+    0x10001a6c   0x000004b0   Code   RO          345    .text               qn902xb2_lib_lite.lib(calibration.o)
+    0x10001f1c   0x00000198   Code   RO          358    .text               qn902xb2_lib_lite.lib(qnrf.o)
+    0x100020b4   0x0000002c   Code   RO          368    .text               mc_p.l(uidiv.o)
+    0x100020e0   0x00000028   Code   RO          370    .text               mc_p.l(idiv.o)
+    0x10002108   0x0000008c   Code   RO          376    .text               mc_p.l(mktime.o)
+    0x10002194   0x00000024   Code   RO          379    .text               mc_p.l(memseta.o)
+    0x100021b8   0x00000010   Code   RO          395    .text               mc_p.l(localtime_w.o)
+    0x100021c8   0x00000074   Code   RO          398    .text               mc_p.l(localtime_i.o)
+    0x1000223c   0x00000151   Data   RO          359    .constdata          qn902xb2_lib_lite.lib(qnrf.o)
+    0x1000238d   0x0000000c   Data   RO          377    .constdata          mc_p.l(mktime.o)
+    0x10002399   0x0000000c   Data   RO          399    .constdata          mc_p.l(localtime_i.o)
+    0x100023a5   0x00000003   PAD
+    0x100023a8   0x00000004   Data   RW          109    .data               gpio.o
+    0x100023ac   0x00000004   Data   RW          173    .data               rtc.o
+    0x100023b0   0x00000019   Data   RW          205    .data               sleep.o
+    0x100023c9   0x00000003   PAD
+    0x100023cc   0x0000000c   Data   RW          247    .data               syscon.o
+    0x100023d8   0x00000020   Data   RW          288    .data               timer.o
+    0x100023f8   0x00000014   Zero   RW          144    .bss                i2c.o
+    0x1000240c   0x0000000c   Zero   RW          172    .bss                rtc.o
+    0x10002418   0x00000068   Zero   RW          317    .bss                i2c_example.o
+    0x10002480   0x0000002c   Zero   RW          396    .bss                mc_p.l(localtime_w.o)
+    0x100024ac   0x00000004   PAD
+    0x100024b0   0x00000200   Zero   RW            1    STACK               startup.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       840         10          0          4          0      27954   gpio.o
+      1308         20          0          0         20      20515   i2c.o
+       244         16          0          0        104      15617   i2c_example.o
+       784         18          0          4         12      20107   rtc.o
+         0          0          0         25          0       4056   sleep.o
+        48         14        192          0        512        888   startup.o
+      1340        110          0         12          0      26007   syscon.o
+       652         52          0          0          0      76399   system.o
+      1252         60          0         32          0      21030   timer.o
+
+    ----------------------------------------------------------------------
+      6468        300        208         80        648     212573   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         0          0          0          3          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        40          0          0          0          0         72   idiv.o
+        36          8          0          0          0         68   init.o
+       116         12         12          0          0         72   localtime_i.o
+        16          6          0          0         44         68   localtime_w.o
+        36          0          0          0          0        100   memseta.o
+       140         16         12          0          0         72   mktime.o
+        44          0          0          0          0         72   uidiv.o
+      1200         36          0          0          0        476   calibration.o
+       408         18        337          0          0        228   qnrf.o
+
+    ----------------------------------------------------------------------
+      2088        104        364          0         48       1228   Library Totals
+         2          0          3          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       478         50         24          0         44        524   mc_p.l
+      1608         54        337          0          0        704   qn902xb2_lib_lite.lib
+
+    ----------------------------------------------------------------------
+      2088        104        364          0         48       1228   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      8556        404        572         80        696     213249   Grand Totals
+      8556        404        572         80        696     213249   ELF Image Totals
+      8556        404        572         80          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 9128 (   8.91kB)
+    Total RW  Size (RW Data + ZI Data)               776 (   0.76kB)
+    Total ROM Size (Code + RO Data + RW Data)       9208 (   8.99kB)
+
+==============================================================================
+

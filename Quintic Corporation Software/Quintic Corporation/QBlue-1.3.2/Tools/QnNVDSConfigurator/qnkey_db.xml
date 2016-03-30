@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<QNTAG_DATABASE VERSION="1">
+    <!--
+    Copyright (C) 2006-2013, Quintic Co., Ltd.
+    -->
+    <!--
+    NOTE:
+    CODE=Addr:  DEFAULTVALUE format 087C:BE:000000
+    CODE=Ascii: DEFAULTVALUE format abcdefgABCDEFG12346
+    CODE=Num:   DEFAULTVALUE format hexadecimal 0x12
+    CODE=Bool:  DEFAULTVALUE format False or True
+    CODE=Hex:   DEFAULTVALUE format AB CD EF 12
+    -->
+
+    <QNTAG NAME="BdAddr" TAG="1" CODE="BD Addr">
+        <DEFAULTVALUE>08 7C BE 00 00 00</DEFAULTVALUE>
+        <LABEL>Bluetooth device address</LABEL>
+        <DESCRIPTION>
+The local device's public Bluetooth address.  This should be
+unique to this device, allocated during manufacturing.
+The default value of this key is one of Quintic's legal addresses:
+08 7C BE 00 00 00
+<!--087C:BE:000000-->
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="DeviceName" TAG="2" CODE="String(Ascii)" LENGTH="32" LENGTH_VARIABLE="True">
+        <DEFAULTVALUE>Quintic BLE</DEFAULTVALUE>
+        <LABEL>Device name</LABEL>
+        <DESCRIPTION>
+The local device's Bluetooth name.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="ClockDrift" TAG="3" CODE="Number" MIN="0" MAX="500" LENGTH="2">
+        <DEFAULTVALUE>100</DEFAULTVALUE>
+        <LABEL>Clock Drift</LABEL>
+        <DESCRIPTION>
+The local Bluetooth device and remote Bluetooth device clock drift rate. Its unit is ppm.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="ExternalWakeUpTime" TAG="4" CODE="Number" MIN="0" MAX="64000" LENGTH="2" SHOW="True">
+        <DEFAULTVALUE>900</DEFAULTVALUE>
+        <LABEL>External wake-up time</LABEL>
+        <DESCRIPTION>
+External wake-up time, Its unit is us.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="OscillatorWakeUpTime" TAG="5" CODE="Number" MIN="0" MAX="65535" LENGTH="2" SHOW="True">
+        <DEFAULTVALUE>900</DEFAULTVALUE>
+        <LABEL>Oscillator wake-up time</LABEL>
+        <DESCRIPTION>
+Oscillator wake-up time, Its unit is us.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="RadioWakeUpTime" TAG="6" CODE="Number" MIN="0" MAX="32000" LENGTH="2" SHOW="False">
+        <DEFAULTVALUE>400</DEFAULTVALUE>
+        <LABEL>Radio wake-up time</LABEL>
+        <DESCRIPTION>
+Radio wake-up time, Its unit is us.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="EnableSleepMode" TAG="7" CODE="Bool" SHOW="False">
+        <DEFAULTVALUE>False</DEFAULTVALUE>
+        <LABEL>Enable sleep mode</LABEL>
+        <DESCRIPTION>
+if selected "True", the BLE protocol stacks enters sleep mode at the appropriate time.
+if selected "False", the BLE protocol stacks does not enter sleep mode at any time.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="Factory_Setting_2" TAG="8" CODE="Bool" READONLY="True" SHOW="False">
+        <DEFAULTVALUE>False</DEFAULTVALUE>
+        <LABEL>Factory Setting 2</LABEL>
+        <DESCRIPTION>
+Factory Setting. Read only.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="Factory_Setting_3" TAG="9" CODE="Array(Hex)" LENGTH="4" READONLY="True" SHOW="False">
+        <DEFAULTVALUE>00 00 00 00</DEFAULTVALUE>
+        <LABEL>Factory Setting 3</LABEL>
+        <DESCRIPTION>
+Factory Setting. Read only.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="Factory_Setting_4" TAG="0x0a" CODE="Array(Hex)" LENGTH="4" READONLY="True" SHOW="False">
+        <DEFAULTVALUE>00 00 00 00</DEFAULTVALUE>
+        <LABEL>Factory Setting 4</LABEL>
+        <DESCRIPTION>
+Factory Setting. Read only.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_TK_TYPE" TAG="0x0b" CODE="Bool">
+        <DEFAULTVALUE>False</DEFAULTVALUE>
+        <LABEL>TK TYPE</LABEL>
+        <DESCRIPTION>
+If the value is False, the Tag=12 will be used as TK value;
+If the value is True,  the Tag=12 will not be used as TK value. The application will generate TK by itself.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_TK_KEY" TAG="0x0c" CODE="String(Ascii)" LENGTH="6" DICT="0123456789">
+        <DEFAULTVALUE>111111</DEFAULTVALUE>
+        <LABEL>TK</LABEL>
+        <DESCRIPTION>
+Local used Temporary Key (TK) which is a 128-bit temporary key used in the pairing process which is used to generate STK.
+The ascii range must be from '0' to '9', and length must be 6 byte.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_IRK_KEY" TAG="0x0d" CODE="Array(Hex)" LENGTH="16">
+        <DEFAULTVALUE>01 5F E8 B4 56 07 8E 22 18 A6 7C E1 E4 BA 99 A5</DEFAULTVALUE>
+        <LABEL>IRK</LABEL>
+        <DESCRIPTION>
+Local used Identity Resolving Key (IRK) which is a 128-bit key used to generate and resolve random addresses.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_CSRK_KEY" TAG="0x0e" CODE="Array(Hex)" LENGTH="16">
+        <DEFAULTVALUE>02 45 30 DA 3A FC 81 48 F1 0D AD 2E 91 9D 57 7B</DEFAULTVALUE>
+        <LABEL>CSRK</LABEL>
+        <DESCRIPTION>
+Local used Connection Signature Resolving Key (CSRK) which is a 128-bit key used to sign data and verify signatures on the receiving device.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_LTK_KEY" TAG="0x0f" CODE="Array(Hex)" LENGTH="16">
+        <DEFAULTVALUE>BF 01 FB 9D 4E F3 BC 36 D8 74 F5 39 41 38 68 4C</DEFAULTVALUE>
+        <LABEL>LTK</LABEL>
+        <DESCRIPTION>
+Local used Long TERM Key (LTK) which is a 128-bit key used to generate the contributory session key for an encrypted connection.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_XCSEL" TAG="0x10" CODE="Number" MIN="0" MAX="0x3F" LENGTH="1">
+        <DEFAULTVALUE>0x11</DEFAULTVALUE>
+        <LABEL>XCSEL</LABEL>
+        <DESCRIPTION>
+Crystal oscillator cap loading selection
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_TEMPERATURE_OFFSET" TAG="0x11" CODE="Number" MIN="0" MAX="0xFFFFFFFF" LENGTH="4">
+        <DEFAULTVALUE>-200</DEFAULTVALUE>
+        <LABEL>Temperature Offset</LABEL>
+        <DESCRIPTION>
+Temperature offset.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_ADC_INT_REF_SCALE" TAG="0x12" CODE="Number" MIN="0" MAX="0xFFFFFFFF" LENGTH="4">
+        <DEFAULTVALUE>1000</DEFAULTVALUE>
+        <LABEL>ADC Scale</LABEL>
+        <DESCRIPTION>
+ADC internal reference scale.
+        </DESCRIPTION>
+    </QNTAG>
+
+    <QNTAG NAME="NVDS_TAG_ADC_INT_REF_VCM" TAG="0x13" CODE="Number" MIN="0" MAX="0xFFFFFFFF" LENGTH="4">
+        <DEFAULTVALUE>500</DEFAULTVALUE>
+        <LABEL>ADC VCM</LABEL>
+        <DESCRIPTION>
+ADC internal reference vcm.
+        </DESCRIPTION>
+    </QNTAG>
+
+</QNTAG_DATABASE>

@@ -1,0 +1,15 @@
+--cpu Cortex-M0
+".\obj\startup.o"
+".\obj\system.o"
+".\obj\gpio.o"
+".\obj\rtc.o"
+".\obj\sleep.o"
+".\obj\syscon.o"
+".\obj\timer.o"
+".\obj\uart.o"
+"..\..\src\lib\keil\qn902xb2_lib_lite.lib"
+".\obj\sleep_example.o"
+--library_type=microlib --strict --scatter "..\..\src\link\keil\qn9020_link.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\sleep.map" -o .\obj\sleep.axf
